@@ -1,0 +1,20 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+html, body {
+/*     width: 100vw; */
+}
+.panel-group-details .accordion-toggle.collapsed::after, .panel-group-details .accordion-toggle::after {
+    right: 98%;
+    left: 0px !important;
+}
+
+.panel-group-details .accordion-toggle.collapsed::after, .panel-group-details .accordion-toggle::after {
+    right: auto;
+    left: 0px !important;
+}
+
+.txt-listing-primary {
+    margin-top: 20px;
+}
+
+
+}

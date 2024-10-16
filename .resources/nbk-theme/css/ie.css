@@ -1,0 +1,101 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    html, body {
+/*         width: 100vw; */
+        overflow-x: visible;
+    }
+
+    .listing_crousal_inner .icon_listing{
+        height: auto !important;
+    }
+    .feature_listing_single{
+        display: block;
+        padding:20px 10px 10px 10px;
+    }
+    .feature_listing_single .arrow_down_single{
+        width: 100%;
+        transform: translateX(-5%);
+    }
+    .active.box_lissting_section {
+        position: relative;
+        display: block;
+    }
+    .box_lissting_section.active {
+        display: block !important;
+    }
+
+    .rest_drop_icon_img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .data-checkbox-discount {
+        width: auto;
+        height: auto;
+        padding: 30px 38px;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .shoping-cart-checkbx:checked + label::after, :checked.shoping-cart-checkbx + label::before, :not(:checked).shoping-cart-checkbx + label::before {
+    content: none !important;
+    }
+    .shopping_bag .shopping_bag_icon {
+        width: 100% !important;
+    }
+    .shopping_cart_error_message {
+        margin-top: 40px;
+    }
+    .rest_drop_icon {
+        top: 0px;
+    }
+    .arrow_down_single.active{
+        width: 30% !important;
+        left: 50%;
+        position: absolute;
+        margin-left: -40px;
+    }
+    
+    .feature_listing_single .arrow_down_single {
+        width: 90%;
+        transform: translateX(0%);
+    }
+
+    .arrow_down_single {
+        height: 40px;
+    }   
+
+    .newlisting_border_none{
+        border-right: none;
+    }
+
+    .form-group.listings input{
+        border-bottom: none;
+    }    
+    .listing_single .post-item {
+        border: 1px solid rgba(14, 76, 140, 0.11);
+    }
+
+    .shoping_cart_front_txt .shoping_cart_pricing {
+        margin: 150px 0 10px 0;
+    }
+
+    .text_disclaimer {
+        max-width: none;
+    }
+
+    .payment-methodes-col {
+        flex-direction: column;
+        display: block !important;
+        text-align: center;
+    }
+
+    .txt-listing-primary {
+        margin-top: 20px;
+    }
+	.btn-outline-secondary.btn_anchor, .btn-maroon.btn_anchor {
+	  height: 40px;
+	}
+	.programs-row .banner_img_listing {
+        min-height: 410px !important;
+    }
+}

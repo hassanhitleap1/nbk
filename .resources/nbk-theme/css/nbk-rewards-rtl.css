@@ -1,0 +1,105 @@
+[lang="ar"] .nbk-rewards-top .search-form .search-input {
+  padding: 0 30px 0 55px !important;
+  height: 26px;
+}
+[lang="ar"] .accordion-rewards-sidebar .accordion-button img,
+[lang="ar"] .accordion-rewards-sidebar .accordion-button svg {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+[lang="ar"] .rewards-main .compare-cards {
+  float: left;
+}
+[lang="ar"] .rewards-selected-list .rewards-selected {
+  margin-right: 0px;
+  margin-left: 15px;
+}
+[lang="ar"] .rewards-selected-list .all-offers {
+  margin-left: 10px;
+  margin-right: 0;
+}
+[lang="ar"] .rewards-selected-list .rewards-selected .btn-remove {
+  right: inherit;
+  left: -8px;
+}
+[lang="ar"] .rewards-main .search-form.small {
+  margin-right: 0;
+}
+[lang="ar"] .accordion-rewards-sidebar .mCustomScrollbar.accordion-body {
+  padding-right: 20px;
+  padding-left: 0;
+}
+[lang="ar"] .rewards-main .selectz .search-form.small i {
+  margin-top: 0;
+  float: left !important;
+  margin-left: 0!important;
+  line-height: 23px!important;
+}
+[lang="ar"] .rewards-main .selectz .search-form.small button {
+  height: 25px;
+}
+[lang="ar"] .rewards-brands-btn-group .btn + .btn {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+[lang="ar"] .rewards-checkbox-list.brands-scroll {
+  margin-left: -20px;
+  margin-right: 0px;
+}
+@media (max-width: 767px) {
+  [lang="ar"] .nbk-rewards-top .selectz {
+    margin-right: 0;
+  }
+  [lang="ar"] .nbk-rewards-top .wish-list {
+    margin-right: 0;
+  }
+  [lang="ar"] .nbk-rewards-top .rewards-top-wrap {
+    text-align: left;
+  }
+  /*[lang="ar"] .rewards-main .selectz .search-form.small i {*/
+  /*  top: 1px;*/
+  /*}*/
+  [lang="ar"] .wish-list .subscribe-poup.suggest-popup.my-fav-login {
+    right: -135px!important;
+  }
+  /*[lang="ar"] .fav-posts .top-img-sec > a img {*/
+  /*  width: 70%;*/
+  /*  margin-right: 49px;*/
+  /*}*/
+  /*[lang="ar"]  .fav-posts .heart-icon {*/
+  /*  margin-left: 60px;*/
+  /*  margin-right: 0;*/
+  /*}*/
+  .offcanvas-rewards .rewards-footer-buttons .all-offers + .all-offers {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 0 !important;
+  }
+}
+#totop {
+  right: auto;
+  left: 0;
+}
+
+[lang="ar"] .offcanvas-rewards .offcanvas-title {
+  letter-spacing: 0px !important;
+}
+
+[lang="ar"] .rewards-box-wrap.fav-posts .brand-name{
+  right: 10px !important;
+  left: auto !important;
+}
+
+[lang="ar"] .rewards-main .compare-cards .dk_toggle.dk_label {
+  background: rgba(0, 0, 0, 0) url(https://www.nbk.com/.resources/nbk-theme/images/rewardsv2/down-arrow-new-v2.svg) no-repeat scroll left center;
+}
+
+[lang="ar"] .rewards-main .all-offers.mobile-filters i {
+  float: left!important;
+}
+
+[lang="ar"] .aligned-svg {
+  margin-left: unset !important;
+  margin-right: 5px!important;
+  bottom: unset !important;
+}
+

@@ -1,0 +1,1943 @@
+/*
+  Docs at http://http://simpleweatherjs.com
+
+  Look inspired by http://www.degreees.com/
+  Used for demo purposes.
+
+  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
+
+  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
+*/
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.blue{
+    color: #0e4c8c;
+}
+.light-blue{
+    color: #98bfe4;
+}
+.weather .weather-img i {
+    color: #fff;
+    font-family: weather;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.0;
+    text-transform: none;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+#weather h2 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+    margin: 0;
+    padding: 0;
+}
+
+#weather li {
+    background: #fff;
+    background: rgba(255,255,255,0.90);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#weather .currently {
+    margin: 0 20px;
+}
+
+.carousel-edit-bar .mgnlEditor, .carousel-edit-bar .mgnlEditor div {
+    z-index: 100 !important;
+}
+.flag div.mgnlEditorBar.area.end{
+    display: none;
+}
+a.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+}
+.account-comparison .card-box.card-compare-box > h3 { min-height: 75px; }
+.credit-card-compare h3 a { min-height: 75px; }
+.term-page .para-col #component-0 { padding-top: 0; }
+/* highlight results */
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+    background-color: #FFF;
+}
+
+.ui-autocomplete span.hl_results {
+    background-color: #ffff66;
+}
+
+/* loading - the AJAX indicator */
+.ui-autocomplete-loading {
+    background:  url('../images/loading.gif') right center no-repeat;
+}
+/* scroll results */
+.ui-autocomplete {
+    max-height: 250px;
+    overflow-y: scroll;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+.ui-autocomplete li {
+    font-size: 14px;
+    line-height: 18px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.ui-autocomplete li.ui-menu-item a {
+    display: block;
+}
+.ui-autocomplete li.ui-menu-item a p {
+    display: inline;
+}
+
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+    height: 250px;
+}
+
+/*news Overview */
+.dp8wrapper.affix {
+
+    width:246px !important; top:10px !important;
+
+}
+
+.dp8bar span.bar {
+
+    background: #98c0e6;
+
+    width: 6px;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+
+
+    float: left;
+
+}
+
+.dp8bar {
+
+    position:relative;
+
+}
+
+.dp8bar .icon-ok {
+
+    display:none;
+
+}
+
+.reading {
+
+
+
+    border: 1px solid #98c0e6 !important;
+
+}
+
+.reading a  {
+
+    color:#98c0e6;
+
+}
+
+.read .bar {
+
+    display:none;
+
+}
+.notification-dropdown ul li.noAnnouncment.read{
+    background: none;
+}
+.normalize-style p{
+    color: #505150;
+    font-family: "dax-regularregular";
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+}
+.normalize-style .post-title a {
+    color: #0e4c8c;
+    font-family: "dax-regularregular";
+    font-size: 16px;
+    width: 100%;
+    padding-bottom:7px;
+}
+.post-item.normalize-style .post-title h3{
+    float: none;
+}
+a.no-link, .no-any-event{
+    pointer-events: none!important;
+    cursor: default;
+    background:none!important;
+}
+/*.ui-datepicker-calendar {
+    display: none;
+}*/
+.nbk-tool .loan-btn-group a.active { background: #0e4c8c; color: #fff;  }
+.tool-section-page .loan-btn-group a.active { background: #0e4c8c; color: #fff;  }
+.slider-180-wrapper .repayment-month ul li{
+    width: 6.666%;
+}
+.slider-120-wrapper .repayment-month ul li{
+    width: 10%!important;
+}
+.search-section input {
+    border: 0 none;
+    color: #0e4c8c;
+    font-family: "dax-regularregular";
+    padding: 4px 10px;
+    width: 100%;
+}
+/**********************************
+override and improve custom css
+***********************************/
+
+.search-form.small button{
+    position: absolute;
+    top: 1px;
+    right: 0;
+    background: #0e4c8c none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 12px;
+    padding: 0px 10px;
+    font-family: "dax-regularregular";
+    line-height: 23px;
+    border-style: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.nbk-tool input[type="submit"]{
+    background: #0e4c8c none repeat scroll 0 0;
+    border: 1px solid #6b90b8;
+    border-radius: 4px;
+    color: #fff;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    line-height: 17px;
+    margin-right: 0;
+    padding: 0 15px;
+    text-align: center;
+    width: 84px;
+}
+
+
+#ibanResultWrong, .notEntitled label,
+.repayment-tenure .error,
+#digitsValidation{
+    color: #c5232d!important;
+    font-family: "dax-regularregular";
+}
+.type-boxes .col-md-6 label.error{
+    display: inline-block!important;
+    color: #c5232d!important;
+}
+#slider .text-middle .slider-readmore.secondLink{
+    margin-left: 20px;
+}
+.footer-content .inline-widget .widget-title {
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-family: 'dax-mediumregular';
+    margin-bottom: 0;
+    padding: 5px 40px 0 0px;
+    text-transform: none;
+}
+input.error{
+    border: 2px solid red !important;
+}
+span.min-height-18{
+    min-height: 18px;
+}
+
+/* this is a temporary fix, this should be dynamic */
+@media (min-width: 320px) and (max-width: 767px) {
+    .notification-dropdown {
+        left: -80px;
+        width: 180px;
+        top: 26px;
+    }
+}
+.special-offers.white-links a{
+    color: white !important;
+}
+#icon-weather-tools{
+    font-size: 60px;
+    color: #0e4c8c;
+}
+
+.read .dp8bar .icon-ok {
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 170px;
+}
+
+.nbk-tool-button{
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    background: #ce2028;
+    margin-right: 0 !important;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    transform-origin: 33px 64px;
+    position: absolute !important;
+    left:0;
+    font-size: 15px !important;
+}
+a.nbk-tool-button:hover{
+    color: white;
+}
+form.card-form-filter{
+    float: left;
+}
+.compare-link{
+    text-align: right;
+}
+.ui-widget.ui-widget-content{
+    overflow-y: hidden;
+}
+.term-nav ul li a{
+    text-transform: capitalize;
+}
+.credit-card-compare .container-else .col-md-4:last-child{
+    border-right: 0px;
+}
+.credit-card-compare .container-else .col-xs-6:last-child{
+    border-right: 0px;
+}
+.credit-card-compare .container-else .col-md-3:last-child{
+    border-right: 0px;
+}
+.form0 .error {
+    background: rgba(0, 0, 0, 0) url("../images/nbk/validation-error-img.png") no-repeat scroll 97% center;
+    border: 1px solid #ee2b33;
+}
+.errorTxt .error{
+    display: block;
+    border: none;
+    background: none;
+}
+.fck-tables table tr{
+     border-bottom: 2px solid #d4d4d4;
+     border-collapse: collapse;
+     font-size: 14px;
+     color: #505150;
+ }
+.fck-tables table, .fck-tables table tr td, .fck-tables table thead tr, .fck-tables table tr td{
+    border: none;
+}
+.fck-tables table thead{
+    background: #99c0e5 none repeat scroll 0 0;
+
+}
+.fck-tables table thead th{
+    font-size: 16px;
+    color: #0d4d8b;
+    font-weight: normal;
+}
+.fck-tables td, .fck-tables th{
+    padding: 5px 20px;
+}
+.find-us-map .selectz{
+    margin-right: 0.7%;
+}
+.blue-header{
+    color: #0e4c8c!important;
+    display: block;
+    font-family: dax-regularregular!important;
+    font-size: 20px !important;
+    padding: 30px 0 0 0 !important;
+    margin-bottom: 10px !important;
+    font-weight: normal;
+    text-transform: uppercase !important;
+    width: 100%;
+}
+.blue-header:first-child{
+    padding-top: 0!important;
+}
+.moving-stepsz {
+    counter-reset: headings;
+    list-style: none;
+}
+
+
+.moving-stepsz > li::before,
+.moving-stepsz > li::before{
+    background: #0e4c8c none repeat scroll 0 0;
+    border-radius: 4px;
+    color: #ffffff;
+    content: counter(headings, decimal);
+    counter-increment: headings;
+    display: inline-block;
+    float: left;
+    font-family: dax-mediumregular;
+    font-size: 12px;
+    height: 18px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 5px;
+    text-align: center;
+    text-indent: 0;
+    width: 18px;
+}
+
+.insta-feeds {
+    /** min-width: 245px; **/
+    padding: 4px 4px 4px;
+}
+
+/*** fix for jquery client side validation ***/
+.term-page .after input[type=radio] {
+    display: inline;
+    visibility: hidden;
+}
+.all-offers.apply-related-products{
+    border: none;
+    margin-bottom: 55px;
+}
+select.date-dropdown {
+    min-width: auto;
+    max-width: 25%;
+    margin-right: 5px !important;
+    display: inline-block;
+    box-shadow: none;
+    border: 1px solid #d6d6d6;;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-left: 5px;
+}
+
+.text.error,
+.text.error a,
+.text.error p{
+    color: red;
+}
+
+.terms-form span.error {
+    color: #b71828;
+    display: inline-block !important;
+    font-size: 10px!important;
+    font-weight: 100;
+    border: none !important;
+    background: none;
+}
+
+.dk_container {
+    background-color: transparent;
+}
+.dk_container span.error {
+    font-weight: 700;
+}
+
+.cols-25 {
+    float: none;
+}
+label.termsAndConditions {
+    font-weight: normal;
+    font-size: 12px;
+}
+.moving-stepsz a,
+.careers-box .moving-stepsz h3{
+    color: #0e4c8c;
+}
+.link-select-less-padding .dk_options a{
+    padding: 0 10px;
+    font-weight: normal;
+    font-family: "dax-regularregular";
+    line-height: 18px;
+}
+.full-width-select .dk_container{
+    width: 100%;
+}
+.loan-box.full-width-select .dk_toggle.dk_label{
+    width: 100%!important;
+}
+.loan-box.full-width-select input[type='text']{
+    width: 100%!important;
+}
+#minInitialDepositLabel{
+    display: inline;
+}
+.hide-nav .owl-nav{
+    display: none !important;
+}
+.hide-nav .owl-dot{
+    visibility: hidden;
+}
+.terms-link{
+    color: #0e4c8c;
+    font-size: 12px;
+    font-family: "dax-mediumregular";
+    text-decoration: underline !important;
+}
+fieldset{
+    width: 100%;
+}
+
+.available{
+    color: #0e4c8c;
+}
+.terms-form .dk_container{
+    background-color: #ffffff;
+}
+.wrappers strong a,
+.wrappers a strong{
+    color: #0e4c8c;
+}
+.ps-41 strong a,
+.ps-41 a {
+    color: #0e4c8c;
+}
+.no-margin-for-child p{
+    margin-bottom: 0;
+}
+.nbk-group-header #logo{
+    padding: 17px 0 8px;
+}
+.type-boxes p{
+    color: black!important;
+    margin-top: -5px!important;
+}
+.loan-box a p{
+    margin-bottom: 15px!important;
+}
+.faq-description ol{
+    padding-left: 12px!important;
+    width:100%;
+}
+.product.contact.last-box {
+    margin-bottom: 40px;
+}
+.submit-with-recaptcha,
+form .cols-buttons input[type=submit].btn {
+    margin-top: 0;
+    width: auto;
+}
+@media (min-width: 1400px) {
+    .media-slider, .media-slider .owl-item {height: 385px;}
+}
+/*** fix main area min height ***/
+.main-content-wrapper {
+    min-height: 1200px;
+}
+/*** fix for hidden dropdown on mobile screen on "Right Product For Me" ***/
+@media (max-width: 767px) {
+    .credit-card-compare .container-else {
+        overflow: visible;
+    }
+    .credit-card-compare.right-card-page.eligibility {
+        overflow: visible;
+    }
+    .elClickFix .col-md-12,
+    .mobile-click-fix{
+        float: left;
+    }
+}
+/*** fix for links in child overview list ***/
+.mask li a {
+    font-size: 16px;
+}
+
+/*** fix for investment funds and investment landing page ***/
+.para-col ul li ul {
+    list-style: none;
+}
+.list-bullets ul li ul li,
+.para-col ul li ul li {
+    margin-left: 15px!important;
+    margin-top:8px;
+}
+.list-bullets ul{
+    margin-bottom: 10px;
+    list-style: none;
+}
+.features-points li{
+    padding-left: 0px;
+}
+.list-bullets p{
+    margin-bottom: 10px!important;
+}
+.list-bullets ul li{
+    margin-bottom: 5px;
+    background: rgba(0, 0, 0, 0) url(../images/card-listing/dot.png) no-repeat scroll left center;
+    padding-left: 10px;
+    font-family: "dax-regularregular";
+    background-position-y: 7px;
+}
+.list-bullets p strong{
+    color: #0e4c8c;
+}
+.popular h2,
+.popular h1{
+    border-top: 1px solid #ebebeb;
+}
+.input-size-10{
+    font-size: 8.4px!important;
+}
+.faq-points ul li{
+    margin-left: 15px;
+}
+.nbk-group-ar #mainMenu ul li a {
+    font-size: 15px;
+    width: 100%;
+}
+
+.nbk-group-ar #mainMenu li {
+    width: 16.5%;
+}
+
+.post-description{
+    margin-top: 10px;
+}
+.post-content-details{
+    padding: 12px!important;
+}
+.product img {
+    border-radius: 4px;
+}
+.post-image img{
+    border: 1px solid #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+}
+
+.country-width{
+    width: 113px;
+    white-space: nowrap;
+}
+
+.two-items-slider .owl-dots {
+    float: left;
+    margin-bottom: 22px!important;;
+    margin-top: 35px!important;
+    width: 100%;
+}
+.two-items-slider .owl-nav div { top: 40%!important; }
+.two-items-slider .owl-nav button { top: 40%!important; }
+.rewardsRow .special-offers.owl-theme .owl-nav button { top: 40%!important; }
+.two-items-slider{
+    float: left;
+}
+
+.faq-description ul,
+.faq-description ul li,
+.faq-description ol,
+.faq-description ol li {
+    font-family: "dax-regularregular" !important;
+}
+.tab-bg{
+    color: #1b4c75;
+}
+.media-relation-kit h2,
+.media-contacts-title h2,
+.media-relation-kit h1,
+.media-contacts-title h1{
+    color: #0e4c8c;
+    margin-bottom: 10px;!important;
+    font-size: 30px;
+    line-height: 1.5;
+}
+.your-career{
+    margin-top: 30px;
+}
+.deop-flag i{
+    background: #0b4d8c url("../images/nbk/careers/arrow-down.png") no-repeat scroll center center;
+}
+.toggle i{
+    background: #0b4d8c url("../images/nbk/careers/arrow.png") no-repeat scroll center center;
+}
+.deop-flag p{
+    line-height: 24px;
+}
+.country-dropdownzz{
+    background: white;
+}
+.rightLoan{
+    display: none;
+}
+.usageNotAvailable, .selectz.disabled{
+    pointer-events: none;
+    opacity: 0.6;
+}
+.nbk-group-ar .country-dropdown {
+    right: 0;
+    left: auto;
+}
+.card-listing:last-child{
+    border-right: none !important;
+}
+
+@media (max-width: 767px) {
+    .widget-subscribe-form{
+        margin-top: 20px;
+    }
+}
+.latest-news-border,
+.interview-videos-border{
+    border-radius: 4px;
+}
+.button-layout-fix .fee-buttons{
+    width: 90%!important;
+}
+.sticky .card-box h3 a,
+.sticky .credit-card-compare h3 a{
+    min-height: auto;
+}
+.dp8content .levels .timeline-section{
+    width: 780px;
+}
+.custom-member h3{
+    color: #0d4d8b;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "dax-boldregular";
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+.custom-member span{
+    font-size: 16px;
+    line-height: 21.87px;
+    color: #0d4d8b;
+    font-family: "dax-regularregular";
+}
+.list-bullets ol{
+    padding-left: 13px;
+    float: none;
+    font-family: "dax-regularregular";
+}
+.faq-answer ol{
+    padding-left: 40px!important;
+}
+.list-bullets ol li{
+    float: none;
+}
+.list-bullets strong a{
+    color: #0e4c8c;
+}
+#slider .slider-description,
+#banner-slider .slider-description{
+    font-size: 25px;
+    line-height: 1;
+    font-family: "dax-regularregular";
+    border-bottom: none;
+    margin: 0;
+}
+.loan-box a{
+    color: #0e4c8c;
+}
+.para-col ol li{
+    background: none;
+    padding-right: 20px;
+}
+.wrappers ol{
+    margin-left: 11px;
+}
+.wrappers .moving-steps,
+.wrappersz .moving-stepsz{
+    margin-left: 0!important;
+}
+.search-result-listing li{
+    background: none;
+}
+ol.features-points ul,
+ol.features-points ol,
+.faq-answer ul,
+.faq-answer ol{
+    margin-left: 30px!important;
+}
+.map-wrapper{
+    width: 100%;
+}
+@media (min-width: 768px) {
+
+    .map-wrapper{
+        width: 62%;
+    }
+
+    /*** fix for same button width (T12-Compare-Tools.pdf) ***/
+    .credit-card-compare .apply-now {
+        min-width: 124px;
+        margin-bottom: 25px;
+    }
+    .credit-card-compare .learn-more {
+        min-width: 120px;
+    }
+    .credit-card-compare .fee-buttons .learn-more {
+        margin-right: auto;
+    }
+
+    .credit-card-compare .sticky .card-box .fee-buttons .apply-now,
+    .credit-card-compare .sticky .card-box .fee-buttons .learn-more {
+        min-width: inherit;
+    }
+    /*** end of fix for same button width (T12-Compare-Tools.pdf) ***/
+
+    .media-left img{
+        height: 175px;
+        width:100%;
+    }
+
+}
+
+.cols .dateBox{
+    background: #ffffff!important;
+}
+
+/*** fix for date dropdown in apply form ***/
+.dk_options a{
+    color: #111;
+}
+@media (max-width: 767px) {
+    .nbk-tool .loan-box p {
+        width: 99%;
+    }
+}
+.nbk-tool .loan-box .description p{
+    color: #505150;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 10px; line-height: 15px; text-align: center;
+    width: 100%;
+    margin-top: 5px!important;
+}
+.currency-calculator .min-height-18{
+    width: 100%!important;
+}
+/*separate button on three lines*/
+/*.iban .calculate{
+    width: 45%;
+}*/
+.wrappers .moving-steps ul li,
+.wrappers .moving-steps ol li{
+    float: none;
+}
+
+@media (max-width: 767px) {
+    .select-national.compare-cards.dateBox .dk_container.day,
+    .select-national.compare-cards.dateBox .dk_container.month{
+        margin-bottom: 10px;
+        margin-right: 1px!important;
+    }
+
+}
+@media (min-width: 768px) and (max-width: 1099px){
+    .select-national.compare-cards.dateBox .dk_container{
+        margin-bottom: 10px;
+        margin-right: 1px!important;
+    }
+    .compare-cards.economic-report .selectz.sercz{
+        width: 26%!important;;
+    }
+    .reports-filters .search-input{
+        width: 250px!important;
+    }
+    .dateofbirthLabel{
+        width: 40px;
+        margin-right: 0!important;
+    }
+}
+
+@media (min-width: 665px) and (max-width: 1099px){
+    .og-close{
+        right: 20px!important;
+    }
+    .og-fullimg{
+        padding-left: 15px;
+    }
+    .og-download{
+
+        width: 30%!important;
+    }
+}
+
+
+
+@media (max-width: 468px) {
+    /*.ui-autocomplete{*/
+    /*    top: 110px!important;*/
+    /*}*/
+    .apply-now-page .tab-res .nav li,
+    .custom-tabs .nav-tabs > li,
+    .custom-tabs3 .nav-tabs > li {
+        width: 100% !important;
+        float: none;
+    }
+    .apply-now-page .tab-res .nav,
+    .custom-tabs .tab-res .nav,
+    .custom-tabs3 .tab-res .nav {
+        width: 100%;
+    }
+    .column-wrapper-resp .col-md-6{
+        width: 100%!important;
+    }
+    .footer-link-mobile-fix{
+        min-height: auto;
+        height: auto !important;
+    }
+    .footer-link-mobile-fix:nth-child(odd){
+        clear: both;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .about-to-work .row .custom-member{
+        width: 100%;
+    }
+}
+.about-to-work .custom-member .img-responsive, .about-to-work .custom-member .img-fluid{
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .clearfix-small-screen{clear: both}
+    .termDeposit-calculator .repayment-tenure .type-boxes span{
+        width: 100%;
+    }
+}
+.selectz.day .treasury-reports-filter .dk_toggle{
+    font-family: dax-regularregular;
+    font-size: 14px;
+    font-weight: normal;
+}
+.no-margin-for-child table tbody tr td,
+.faq-description table tbody tr td{
+    border: none;
+}
+[data-accordion].open > [data-control]:after {
+    right:10px;!important;
+    top:7px!important;
+}
+@media (max-width: 767px) {
+    #multiple [data-accordion].open > [data-control]:after {
+        right:0;!important;
+        top:3px!important;
+    }
+    .applay-cal-refinancing a{
+        margin-right: 5px;
+    }
+    .loans-refinance-calculator #dk_container_loanRefinanceMonth{
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .loans-refinance-calculator .type-boxes .col-md-6{
+        width: 100%;
+    }
+    .btn-cols{
+        float: left;
+    }
+    #slider .text-middle .slider-readmore.red{
+        margin-left: 0px!important;
+        margin-top: 5px!important;
+    }
+    #slider .text-middle .slider-readmore{
+        margin-top: 5px!important;
+        margin-right: 10px;
+    }
+    .custom-member{
+        margin-bottom: 30px;
+    }
+    .iban a.calculate-miles{
+        float: right!important;
+    }
+    .slider-description.ellipsis{
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 3em;
+    }
+    #slider .slider-description,
+    #banner-slider .slider-description{
+        font-size: 16px;
+    }
+    #slider h2 em,
+    #slider h1 em,
+    #slider p em,
+    #banner-slider p em{
+        font-size: 25px;
+    }
+    .log-in-title{
+        margin-left: 0px!important;
+    }
+    .faq-answer ul{
+        margin-left: 20px!important;
+    }
+    .country-dropdownzz{
+        left: 0;
+    }
+    .deop-flag{
+        position: relative;
+    }
+}
+.faq-description ol li{
+    float: none;
+    width: auto;
+}
+
+
+.latest-offers-slider #owl-demo .owl-nav .owl-prev,
+.latest-offers-slider #owl-demo .owl-nav .owl-next{
+    top: 23%
+
+}
+.loanAmmountValidationMessage{
+    color: #b71828!important;
+}
+.reward-calculator .calculate-reward{
+    float: right!important;
+}
+#fromCurrencyResult, #toCurrencyResult{
+    width: 100%;
+    text-align: center;
+}
+.loans-calculator .dk_container{
+    float: none;
+}
+.loans-calculator .col-sm-3{
+    padding: 0 3px;
+}
+.loans-calculator-page .dk_container{
+    float: none;
+}
+.loans-calculator-page .col-sm-3{
+    padding: 0 3px;
+}
+.tool-section .col-sm-3, .tool-section .col-xs-6, .tool-section .col-xs-8, .tool-section .col-xs-4, .tool-section .col-xs-12{
+    padding-bottom: 10px;
+}
+.btn-blue-link{
+    background-color: #0e4c8c;
+    color: white!important;
+    padding: 0 15px;
+    text-align: center;
+    border-radius: 4px;
+    height: 20px;
+    font-family: "dax-regularregular";
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    line-height: 17px;
+    border: 1px solid #6b90b8;
+}
+.calculate-pos{
+    float: left;
+}
+.apply-now-pos{
+    float: right;
+}
+.slider-label{
+    padding: 0 3px;
+}
+.log-in-title{
+    margin-top: 2px;
+    margin-left: 5px;
+}
+#controls{
+    cursor: pointer;
+}
+
+.contact-us .ps-30 p {
+    padding-top:30px;
+}
+
+@media screen and (orientation:landscape)
+and (min-device-width: 319px)
+and (max-device-width: 768px) {
+    .tool-inner {
+        overflow-y: auto;
+    }
+    .tool-section{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        height: 600px;
+    }
+}
+.all-prodcuts-dynamic{
+    width: 100%;
+}
+
+.media{
+    border: 1px solid #d4d4d4
+}
+
+.media-body h4{
+    color: #0e4c8c;
+    margin-top: 10px;
+    margin-bottom: 0!important;
+    margin-left: 10px;
+}
+.media-body span{
+    color: #98c0e6;
+    margin-left: 10px;
+}
+.media-body p{
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    color: #505150!important;
+    margin-left: 10px;
+}
+.btn-mediaKit-download{
+    display: inline-block!important;
+    width: 100px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 10px;
+}
+.btn-mediaKit-download:hover{
+    color: #fff;
+}
+@media (max-width: 767px) {
+	ul.shareBar{
+        padding: 0;
+    }
+    .media{
+        margin-bottom: 15px;
+    }
+    .media-relation-kit .col-xs-12 {
+        width: 100% !important;
+    }
+    .media-left, .media-right{
+        padding: 0!important;
+        width: 100%;
+    }
+    .media-body{
+        text-align: center;
+    }
+    .btn-mediaKit-download{
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 767px) and (max-width: 1024px){
+    .media{
+        margin-bottom: 15px;
+    }
+    .og-grid .readmore{
+        margin: 0;
+    }
+}
+
+.og-grid{
+    list-style: none;
+    padding: 15px 0 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%
+}
+.og-grid .position{
+    margin-bottom: 15px;
+    color: #0d4d8b;
+}
+.og-grid h3{
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #0d4d8b;
+}
+.og-grid p{
+    color: #0d4d8b;
+}
+.about-to-work h2,
+.about-to-work h1{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.og-grid img{
+    width: 100%;
+    height: auto;
+    outline: 0;
+    display: block;
+    position: relative;
+    border: none;
+}
+.og-grid li{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0 15px;
+    vertical-align: top;
+    width: 33.13%;
+    text-align: center
+}
+/*.members-area-title h2{
+    margin-left: 15px;
+}*/
+.full-description-info{
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 999999;
+}
+.leadership-team .readmore{
+    padding: 4px 10px;
+    float: none;
+}
+.leadership-team .readmore i{
+    float: none;
+    margin-left: 0;
+}
+.leadership-team.toggle .readmore i{
+    background: none;
+}
+/*.members-area-title{
+    margin-bottom: 20px;
+}*/
+.og-grid .readmore i img{
+    width: 100%;
+    height: auto;
+}
+.full-description-info p{
+    color: #0d4d8b;
+    font-size: 12px;
+    line-height: 18px
+}
+/*.about-to-work{
+    margin-top: 30px;
+}*/
+.media-relation-kit .fee-term{
+    margin-top: 20px;
+}
+.leadership-team{
+    margin-top: 35px;
+}
+/*.media{
+    margin-bottom: 30px;
+}*/
+.og-grid .readmore{
+    padding: 5px 32px 5px 10px;
+    float: none;
+}
+.og-grid .readmore i{
+    margin-top: 3px;
+    position: absolute;
+}
+.high-resolution-image h6,
+.low-resolution-image h6{
+    color: #98c0e6;
+    text-decoration: underline;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.og-expander {
+    max-height: 400px;
+    z-index: 1;
+    position: absolute;
+    background: #e6e7e8;
+    top: auto;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+}
+
+.og-expander-inner {
+    padding: 50px 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+.og-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.og-fullimg {
+    width: 31%;
+    text-align: center;
+}
+
+.og-details {
+    max-height: 240px;
+    width: 65%;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+.og-details, .og-fullimg {
+    float: left;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: auto!important;
+
+}
+
+.og-loading {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ddd;
+    box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    -webkit-animation: loader .5s infinite ease-in-out both;
+    -moz-animation: loader .5s infinite ease-in-out both;
+    animation: loader .5s infinite ease-in-out both;
+}
+
+.og-fullimg img {
+    display: inline-block!important;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+
+.og-details h3 {
+    color: #25282f;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.og-details p {
+    color: #666;
+    float: left;
+    font-size: 12px;
+    width: 100%;
+}
+
+.og-details p {
+    line-height: 18px;
+}
+
+.og-details a {
+    font-size: 16px;
+    color: #333;
+    display: none!important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border: 3px solid #333;
+    margin: 30px 0 0;
+    outline: 0;
+}
+
+.og-close::after, .og-close::before {
+    line-height: 35px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 97% center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.og-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.og-grid li.og-expanded>.arrow-position-container>.arrow-position {
+    position: relative;
+    width: 100%;
+}
+.og-grid li.og-expanded>.arrow-position-container>.arrow-position::after {
+    top: auto;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #e6e7e8;
+    border-width: 15px;
+    left: 50%;
+    margin: -10px 0 0 -15px;
+}
+.member-download{
+    margin-top: 10px;
+}
+.og-download{
+    overflow: hidden;
+    float: left;
+    width: 31%;
+    text-align: center;
+}
+.og-close{
+    right: 20%;
+    top: 0;
+    background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 60% center;
+}
+
+.component-area-title h2,
+.component-area-title h1{
+    color: #0d4d8b;
+    font-size: 24px;
+    text-transform: uppercase;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.logos-images h3{
+    margin-top: 15px;
+    color: #0d4d8b;
+    font-size: 16px;
+    line-height: 18px;
+}
+.logos-images h6{
+    color: #98c0e6;
+    text-decoration: underline;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.logos-images img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 1199px) and (min-width: 320px){
+    .og-grid li{
+        height: auto;!important;
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .og-grid li{
+        width: auto;!important;
+    }
+    .og-expander{
+        left: 9%;
+        width: 82%;
+    }
+    .media-left img, .media-right img{
+        width: 100%;
+    }
+    .small-interviews img,
+    .videos-image{
+        width: 100%;
+    }
+    .interview-reset-button{
+        margin-left: 0;
+    }
+    .video-listing .video-play-icon a{
+        width: 50px;
+    }
+    .video-listing .video-play-icon .video-large-image{
+        width: 100%;
+        height: auto;
+    }
+    .video-listing .video-play-icon{
+        top: 15%!important;
+    }
+}
+@media screen and (max-width: 650px){
+    .og-fullimg {
+        display: none;
+    }
+    .og-details{
+        width: 100%;
+        float: none;
+        height: 69%;
+        padding-right: 20px;
+    }
+    .og-download{
+        width: 100%;
+        bottom: 40px;
+        top: 0;
+        position: relative;
+    }
+    /*.og-close{
+        right: 5px;
+    }*/
+
+}
+.second-button{
+    margin-top: 10px;
+}
+.media-relation-page .announcements-four-cols h3 a{
+    margin-bottom: 0;
+}
+.media-relation-page .announcements-four-cols span{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.view-all > i{
+    margin-left: 20px;
+}
+
+.video-listing{
+    margin-top: 60px;
+}
+.video-listing span,
+.interview-listing span{
+    color: #99c0e5;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.video-listing h3,
+.interview-listing h3{
+    color: #0b4d8c;
+    float: left;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.interview-listing h2,
+.interview-listing h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-listing .video-play-icon{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    transition: all 0.3s ease 0s;
+    width: 90%;
+}
+.video-listing .video-play-icon.video-play-icon-highlight{
+    width: 100%;
+}
+
+.small-videos,
+.small-interviews{
+    display: none;
+}
+
+.small-videos h3,
+.small-interviews h3{
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.small-videos .video-play-icon{
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.show-more-videos{
+    margin-top: 30px;
+}
+
+.video-interview-sec.video-list .video-box p,
+.video-interview-sec .video-box p{
+    color: #0e4c8c;
+}
+
+.navigation-image{
+    padding-top: 50px;
+    padding-right: 20px!important;
+}
+
+.media-kit-button{
+    margin-bottom: 30px;
+}
+
+.interview-button{
+    margin-bottom: 20px;
+}
+.video-box span{
+    float: left;
+    margin-top: 10px;
+}
+
+.interview-sec-media .video-box span{
+    color: #99c0e5;
+    font-family: "dax-regularregular";
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.large-video p,
+.large-interview p{
+    color: #0b4d8c;
+    float: left;
+    font-size: 24px;
+    line-height: 28px;
+    width: 100%;
+    margin-bottom: 10px!important;
+}
+
+.large-video span,
+.large-interview span{
+    color: #99c0e5;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 14px;
+    line-height: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+.shareBar li{
+    margin-right: 15px!important;
+}
+
+.hideIfMoreThanTwoSelected{
+    margin: 0!important;
+}
+
+
+.chances-winning {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.chances-winning-nbk,
+.chances-label{
+    font-size: 2.4rem;
+    line-height: 1.5;
+}
+.chances-title{
+    margin-top: 10px;
+    margin-bottom: 0!important;
+}
+.chances{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#changes{
+    padding-left: 0;
+}
+.chances-box{
+    background: rgba(0, 0, 0, 0) url("../images/nbk/gray.png") repeat-x scroll 0 0;
+    margin-top: -12px;
+}
+
+
+.disclaimer-text{
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+.para-col .chances-main-title{
+    color: #0e4c8c;
+    display: block;
+    float: left;
+    font-family: dax-regularregular;
+    font-size: 20px;
+    margin-bottom: 18px;
+    padding: 45px 0 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.container .chances-main-title{
+    color: #0e4c8c;
+    display: block;
+    float: left;
+    font-family: dax-regularregular;
+    font-size: 20px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+@media (max-width: 767px) and (min-width: 320px){
+    #changes,
+    .chances-box{
+        width: 100%;
+        padding: 0;
+        margin-left: -15px;
+    }
+    .disclaimer-text{
+        padding-left: 0;
+        margin-left: -15px;
+    }
+    .chances-box{
+        margin-top: 0;
+    }
+}
+
+.steps-tab2 h1{
+    font-size: 30px;
+}
+
+#fetch_branches_data span{
+    font-size: 18px;
+    text-transform: capitalize;
+    width: 100%;
+    color: #094d8c;
+    font-family: "dax-regularregular";
+    margin: 0!important;
+    float: left;
+    font-weight: 500;
+}
+.financial-years ul{
+    margin-bottom: 20px;
+}
+
+.financial-years li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 23px !important;
+    font-size: 24px;
+}
+.financial-reports-title{
+    margin-bottom: 25px!important;
+}
+
+.annual-reports thead tr{
+    background: #ffffff;
+    border-bottom: 2px solid #0d4d8b;
+}
+
+.annual-reports thead tr th,
+.annual-reports tbody tr td{
+    padding-left: 0;
+}
+
+.annual-reports thead tr th{
+    border: none;
+}
+
+.financial-years ul li a{
+    color: #000;
+    font-family: "dax-regularregular";
+}
+
+.term-nav.term-reports{
+    background: none;
+    border-top: none;
+}
+
+.term-nav.term-reports ul li a{
+    font-size: 24px;
+}
+
+.financial-years ul li a.active{
+    color: #0d4d8b;
+}
+
+.account-box .reportsSlider-date{
+    color: #98c0e6;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 15px;
+    line-height: 15px;
+    width: 100%;
+    padding: 0 10px 0 10px;!important;
+}
+
+.account-box .reportsSlider-text{
+    padding: 0 10px 0 10px;!important;
+    font-size: 15px;
+}
+
+.account-box .reportsSlider-title{
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding: 0 10px 0 10px;
+    color: #0e4c8c;
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+.sliderReports-readmore{
+    margin: 5px 10px!important;
+}
+.nbk-glace{
+    height: 175px;
+}
+
+.nbk-glace p {
+    height: 45%;
+}
+
+.nbk-glace-date{
+    color: #98c0e6;
+}
+/**
+@media (max-width:767px) {
+
+.nbk-tool { position: absolute; } 
+
+}
+**/
+.no-link-1{
+.pointer-events: none!important;
+    cursor: default;
+}
+.ibangenerator a.calculate-miles {
+	background: #0e4c8c none repeat scroll 0 0;
+	border: 1px solid #6b90b8;
+	border-radius: 4px;
+	color: #fff;
+	float: left;
+	font-family: "dax-regularregular";
+	font-size: 12px;
+	letter-spacing: 0.7px;
+	line-height: 17px;
+	margin-right: 0;
+	padding: 0 15px;
+	text-align: center;
+}
+
+.ibangenerator.loan-box.full-width-select input[type='text'] {
+	width: 50% !important;
+}
+
+.tool-section-page .col-sm-3, .tool-section-page .col-xs-6,
+	.tool-section-page .col-xs-8, .tool-section-page .col-xs-4,
+	.tool-section-page .col-xs-12 {
+	padding-bottom: 10px;
+}
+
+.tool-section-page input[type="submit"] {
+	background: #0e4c8c none repeat scroll 0 0;
+	border: 1px solid #6b90b8;
+	border-radius: 4px;
+	color: #fff;
+	float: left;
+	font-family: "dax-regularregular";
+	font-size: 12px;
+	letter-spacing: 0.7px;
+	line-height: 17px;
+	margin-right: 0;
+	padding: 0 15px;
+	text-align: center;
+	width: 84px;
+}
+
+.tool-section-page {
+	/* width: 375px;
+	*/
+	
+}
+
+.tool-section-page .loan-box .description p {
+	color: #505150;
+	float: left;
+	font-family: "dax-regularregular";
+	font-size: 10px;
+	line-height: 15px;
+	text-align: center;
+	width: 100%;
+	margin-top: 5px !important;
+}
+
+.loans-refinance-calculator-page #dk_container_loanRefinanceMonth {
+	margin-bottom: 10px;
+	/** margin-top: 5px; */
+}
+
+.loans-refinance-calculator-page .type-boxes .col-md-6 {
+	width: 100%;
+}
+@media (max-width: 767px) {
+    .tool-section-page .loan-box p {
+        width: 99%;
+    }
+}
+.tool-section-page .loan-box .description p{
+    color: #505150;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 10px; line-height: 15px; text-align: center;
+    width: 100%;
+    margin-top: 5px!important;
+}
+
+
+#slider-year.repayment-tenure {
+    margin-bottom: 10px;
+}
+
+.tool-section-page .loan-box .description a{
+    color: #fff!important;
+}
