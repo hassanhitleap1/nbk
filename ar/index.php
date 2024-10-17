@@ -178,7 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<body class="wide " data-animation-icon="https://www.nbk.com/resources/nbk-theme/images/spin.svg" >
+<body class="wide " data-animation-icon="/.resources/nbk-theme/images/spin.svg" >
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPKK6JM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -196,7 +196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="header-wrap">
         <div class="">
 <div class="stepTemplateLogo" id="logo" itemtype="http://schema.org/Organization" itemscope>
-            <a href="index.html" class="logo" data-dark-logo="https://www.nbk.com/dam/jcr:281bc4f7-7256-48c6-a05e-761bacea00a3/nbk-logo.svg" itemprop="url">
+            <a href="index.html" class="logo" data-dark-logo="/dam/jcr:281bc4f7-7256-48c6-a05e-761bacea00a3/nbk-logo.svg" itemprop="url">
             <img src="https://www.nbk.com/dam/jcr:281bc4f7-7256-48c6-a05e-761bacea00a3/nbk-logo.svg" alt="SPACES" itemprop="logo"/>
         </a>
 </div>
