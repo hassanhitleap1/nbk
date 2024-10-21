@@ -1,0 +1,53 @@
+.rsbtn.readspeaker-skin{
+	z-index:10000;
+}
+.rsbtn.readspeaker-skin .rsbtn_play {
+  background: #f1f1f1;
+  border-color: #0e4c8c;
+}
+.rsbtn.readspeaker-skin .rsbtn_play .rsbtn_left .rsbtn_text::before {
+  color: #0e4c8c;
+  /* Speaker icon */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_play .rsbtn_left .rsbtn_text .rsbtn_label {
+  color: #0e4c8c;
+  /* Listen label */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_play .rsbtn_right {
+  border-color: #0e4c8c;
+}
+.rsbtn.readspeaker-skin .rsbtn_play .rsbtn_right::before {
+  color: #0e4c8c;
+  /* Play icon */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_play:hover {
+  background: #ffffff;
+}
+.rsbtn.readspeaker-skin .rsbtn_play:hover .rsbtn_left .rsbtn_text ::before {
+  color: #98bfe6;
+  /* Speaker icon */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_play:hover .rsbtn_left .rsbtn_text .rsbtn_label {
+  color: #98bfe6;
+  /* Listen label */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_play:hover .rsbtn_right::before {
+  color: #98bfe6;
+  /* Play icon */
+
+}
+.rsbtn.readspeaker-skin .rsbtn_tooltoggle {
+  background: #f1f1f1;
+  border-color: #0e4c8c;
+  color: #0e4c8c;
+}
+.rsbtn.readspeaker-skin.zoom-tooltoggler .rsbtn_tooltoggle {
+  background: #ffffff;
+  border-color: #0e4c8c;
+  color: #98bfe6;
+}

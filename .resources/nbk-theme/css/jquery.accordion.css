@@ -1,0 +1,190 @@
+
+button[data-control] { border: 0; margin-right: 10px; }
+.main-links a {
+
+
+	border-left:0;
+	border-right:0;
+    font-family: 'dax-boldregular';
+	font-size:14px;
+	letter-spacing: 0.5px;
+    outline: none;
+    padding:  6px 0 6px 25px;
+    display: block;
+    text-align: left;
+    color: #fff;
+    float: left;
+}
+
+
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.intro h1 {
+    font-size: 40px;
+}
+
+.intro p {
+  margin-bottom: 40px;
+}
+
+.intro .btn {
+    display: inline-block;
+    vertical-align: top;
+    max-width: auto;
+    margin: 0 auto;
+    border: 1px solid #5881ab;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+
+    margin: 0 5px;
+    margin-bottom: 15px;
+}
+
+.intro .btn:hover,
+.intro .btn:active {
+  background: black;
+  border-color: black;
+  color: white;
+}
+
+.intro .btn:focus {
+  text-decoration: underline;
+  border-color: #333;
+}
+
+.intro .btn img {
+  margin-right: 5px;
+}
+
+.snippet {
+  max-width: 768px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+[data-accordion] [data-content] {
+
+}
+
+[data-accordion] [data-content] [data-content] {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+}
+
+.open [data-content] article .sublinks {
+    background-color: rgba(255, 255, 255, 0.9);
+	font-family: "dax-regularregular";
+
+}
+
+[data-accordion] [data-accordion] [data-control]::after {
+
+	background-image:url(https://www.nbk.com/.resources/nbk-theme/images/expand-blue.svg);
+	background-repeat:no-repeat;
+	top:3px;
+
+}
+.open[data-accordion] .open[data-accordion] > [data-control]::after {
+
+	background-image:url(https://www.nbk.com/.resources/nbk-theme/images/collapse-blue.svg);
+	background-repeat:no-repeat;
+	top:-1px;
+
+	 }
+
+.open[data-accordion] .open[data-accordion] > [data-content] {
+
+     background-color: rgba(255, 255, 255, 0.9);
+
+
+}
+
+.open button { color:#0e4c8c !important; }
+
+/* Requirements */
+
+[data-accordion] [data-content] {
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+}
+
+#multiple [data-content] [data-accordion] [data-content] a {
+    float: left;
+    padding: 2px 0 2px 25px;
+    width: 100%;
+    background: white;
+}
+
+/* Basic Theme */
+
+
+
+.open[data-accordion] .main-links { background: #98c0e6 }
+
+[data-control], [data-content] > * {
+    border-top: 1px solid #5881ab;
+    padding: 6px 40px 6px 25px;
+}
+
+[data-content] [data-accordion] {
+    float: left;
+    padding: 2px 0 1px;
+    width: 100%;
+}
+
+[data-accordion] [data-control] {
+    position: relative;
+ }
+
+
+[data-accordion] > [data-control]:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 3px;
+    height: 17px;
+    width: 18px;
+    background: url('https://www.nbk.com/.resources/nbk-theme/images/expand-white.svg') center center no-repeat;
+    background-size: 18px 17px;
+}
+
+[data-accordion].open > [data-control]:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 3px;
+    height: 17px;
+    width: 18px;
+    background: url('https://www.nbk.com/.resources/nbk-theme/images/collapse-white.svg') center center no-repeat;
+    background-size: 18px 17px;
+}
+
+#multiple [data-content] [data-accordion]  a { color: #0e4c8c; }
+#multiple [data-content] a {
+    color: #fff;
+    float: left;
+    font-family: "dax-regularregular";
+    font-size: 14px;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+}
+
+.open[data-accordion] [data-content] { width: 100%; background: rgba(255, 255, 255, 0.82);  }
+
+.main-links:last-child [data-content] [data-accordion] { padding-bottom: 8px !important; }
+#multiple [data-content] [data-accordion] [data-content] a:hover{
+    text-decoration: underline!important;
+}

@@ -1,0 +1,99 @@
+/**
+* Copyright (c) 2008, Impact Proximity
+* All rights reserved.
+* @author Jerome Conde <j.conde@impactbbdo.ae>
+* @version 1.0.x
+*/
+
+/**
+* css resets adapted from Eric Meyer [http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/]
+*/
+
+
+ul.Nav1,
+div.SearchBox,
+ul.Nav2,
+div.TVCWrap,
+div.Footer ul.Privacy,
+div.LocalBanksWrap h2,
+div.LeftPane,
+div.Sitemap,
+div.Header div.SelectBox,
+div.QuickLinks,
+ul.Boxes,
+div.CopyHeader img{
+	display:none;
+}
+
+object,embed{
+	display:none;
+}
+
+div.LocalBanksWrap{
+	padding:20px 0;
+	border-bottom:#cadae3 solid 1px;
+}
+div.SelectBox span{
+ display:block;
+ font-size:1.5em;
+ font-weight:bold;
+ padding:10px 0;
+ color:#003366;
+}
+ul.OptionList li li,
+ul.OptionList li div,
+div.SelectBox a.DropDown{
+ display:none;
+}
+
+div.NewsTicker{
+	padding:20px 0;
+	border-bottom:#cadae3 solid 1px;
+}
+
+div.NewsTicker ul.TickerList li{
+	padding:0 0 10px;
+	#cadae3 solid 1px;
+}
+
+ul.Breadcrumb{
+ width:100%;
+ padding:10px 0;
+ margin:0;
+}
+ul.Breadcrumb li{
+ display:inline;
+ color:#b5b5b5;
+ font-size:10px;
+}
+ul.Breadcrumb li:last-child,
+ul.Breadcrumb li.LastChild{
+ font-size:2em;
+ display:block;
+ clear:left;
+ padding:10px 0 0;
+}
+ul.Breadcrumb li a{
+ color:#999999;
+ padding:0 8px 0 1px;
+}
+
+div.Copy{
+	padding:20px 0;
+	border-bottom:#cadae3 solid 1px;
+}
+
+ul.Copyright{
+ width:100%;
+ padding:10px 0;
+ margin:0;
+}
+ul.Copyright li{
+ display:inline;
+ color:#b5b5b5;
+ font-size:10px;
+ padding:0 8px 0 1px;
+}
+ul.Copyright li a{
+ color:#999999;
+}
