@@ -1411,7 +1411,7 @@ and (max-device-width: 768px) {
     top: 0;
     right: 20px;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 97% center;
+    background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 97% center;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -1450,7 +1450,7 @@ and (max-device-width: 768px) {
 .og-close{
     right: 20%;
     top: 0;
-    background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 60% center;
+    background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/tools/close-tools.svg") no-repeat scroll 60% center;
 }
 
 .component-area-title h2,
