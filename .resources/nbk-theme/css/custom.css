@@ -518,7 +518,7 @@ ul { margin: 0; padding: 0; }
 #logo{ padding:17px 0 9px; }
 .header-form-sec { background: #1a5592 none repeat scroll 0 0; float: left; width: 100%; padding-left: 65px; }
 .header-form-sec input {
-    background: transparent url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/search-desktop.svg") no-repeat scroll 10px center;
+    background: transparent url("https://www.nbk.com/.resources/nbk-theme/images/nbk/search-desktop.svg") no-repeat scroll 10px center;
     border: 0 none;
     color: #fff;
     font-family: "dax-regularregular";
@@ -595,7 +595,7 @@ ul { margin: 0; padding: 0; }
 .header-form-sec .search { display: inline-block; width: 59%; }
 .header-form-sec .coutries { float: right; position: relative; }
 .header-form-sec .coutries .flag {
-    background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll left center; float: right; padding: 10px 15px 10px 23px; cursor: pointer; }
+    background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll left center; float: right; padding: 10px 15px 10px 23px; cursor: pointer; }
 .header-form-sec .login { float: right; position: relative; }
 /*font weigh bold, font family dax-medium; sherif required*/
 .header-form-sec .login .login-btn {background: #c52330; border: 1px solid #803452; color: #fff; float: right; font-family: "dax-boldregular"; font-weight: bold; font-size: 20px; letter-spacing: 0.5px; padding: 10px 45px; }
@@ -798,8 +798,8 @@ ul { margin: 0; padding: 0; }
 }
 
 .home-product .owl-nav div { top: 44% !important; }
-.owl-prev { background: url(https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/previous-blue.svg) no-repeat center left !important; display: block !important; text-indent: -999999px;transform: translateY(-50%); }
-.owl-next { background: url(https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/next-blue.svg) no-repeat center right !important; display: block !important; text-indent: -999999px;transform: translateY(-50%); }
+.owl-prev { background: url(https://www.nbk.com/.resources/nbk-theme/images/nbk/previous-blue.svg) no-repeat center left !important; display: block !important; text-indent: -999999px;transform: translateY(-50%); }
+.owl-next { background: url(https://www.nbk.com/.resources/nbk-theme/images/nbk/next-blue.svg) no-repeat center right !important; display: block !important; text-indent: -999999px;transform: translateY(-50%); }
 
 .home-product .owl-dots { margin: 0 0 -8px 0; }
 
@@ -1291,7 +1291,7 @@ a.info{ text-align:center; display:inline-block; border-top:#ebebeb solid 1px; w
     .header-bar { float: left; width: 100%; background: #0e4c8c; margin-top: 5px; position: relative; border-top: 1px solid #5d87b2; border-left: 1px solid #5d87b2; border-right: 1px solid #5d87b2;  }
     .coutries { position: relative; z-index: 999999; }
     .coutries .flag {
-        background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll left center / 10px auto;
+        background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll left center / 10px auto;
         cursor: pointer;
         float: left;
         margin-left: 12px;
@@ -3126,7 +3126,7 @@ select.dropdowns {
 
     .apply-now-btns a { width: 100%; }
     .coutries .flags span { line-height: 31px; }
-    .chose-col .coutries .flags {background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll 96.2% center !important; }
+    .chose-col .coutries .flags {background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll 96.2% center !important; }
     .footer-content { padding: 22px 0;}
     .cols-mn > h2, .cols-mn > h1 { font-size: 24px; margin: 0; text-align: center; }
     .col-sec {display: block;float: none;padding: 15px 0 0;width: 100%;}
@@ -3797,7 +3797,7 @@ select.dropdowns {
     .account-fixed.sticky { box-shadow: none !important; padding: 0 !important; }
 
     .coutries .flags span { line-height: 31px; }
-    .chose-col .coutries .flags {background: rgba(0, 0, 0, 0) url("https://nbk.msrdsto.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll 96.2% center !important; }
+    .chose-col .coutries .flags {background: rgba(0, 0, 0, 0) url("https://www.nbk.com/.resources/nbk-theme/images/nbk/down-arrow.svg") no-repeat scroll 96.2% center !important; }
     .footer-content { padding: 22px 0;}
     .cols-mn > h2,
     .cols-mn > h1{
@@ -5912,7 +5912,7 @@ a.info2{ color: #505150;}
     top: 7px;
     height: 17px;
     width: 18px;
-    background: url(https://nbk.msrdsto.com/.resources/nbk-theme/images/expand-blue.svg) center center no-repeat;
+    background: url(https://www.nbk.com/.resources/nbk-theme/images/expand-blue.svg) center center no-repeat;
     background-size: 18px 17px;
 }
 .custom-tabs [data-content] [data-accordion]{ text-align:left; padding:20px;}

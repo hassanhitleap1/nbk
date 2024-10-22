@@ -91,14 +91,14 @@ button[data-control] { border: 0; margin-right: 10px; }
 
 [data-accordion] [data-accordion] [data-control]::after {
 
-	background-image:url(https://nbk.msrdsto.com/.resources/nbk-theme/images/expand-blue.svg);
+	background-image:url(https://www.nbk.com/.resources/nbk-theme/images/expand-blue.svg);
 	background-repeat:no-repeat;
 	top:3px;
 
 }
 .open[data-accordion] .open[data-accordion] > [data-control]::after {
 
-	background-image:url(https://nbk.msrdsto.com/.resources/nbk-theme/images/collapse-blue.svg);
+	background-image:url(https://www.nbk.com/.resources/nbk-theme/images/collapse-blue.svg);
 	background-repeat:no-repeat;
 	top:-1px;
 
@@ -157,7 +157,7 @@ button[data-control] { border: 0; margin-right: 10px; }
     top: 3px;
     height: 17px;
     width: 18px;
-    background: url('https://nbk.msrdsto.com/.resources/nbk-theme/images/expand-white.svg') center center no-repeat;
+    background: url('https://www.nbk.com/.resources/nbk-theme/images/expand-white.svg') center center no-repeat;
     background-size: 18px 17px;
 }
 
@@ -168,7 +168,7 @@ button[data-control] { border: 0; margin-right: 10px; }
     top: 3px;
     height: 17px;
     width: 18px;
-    background: url('https://nbk.msrdsto.com/.resources/nbk-theme/images/collapse-white.svg') center center no-repeat;
+    background: url('https://www.nbk.com/.resources/nbk-theme/images/collapse-white.svg') center center no-repeat;
     background-size: 18px 17px;
 }
 
