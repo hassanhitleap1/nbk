@@ -3,11 +3,11 @@
 if(isset($_POST)) {
     if(isset($_POST['action']) =='sendtEmailPatment'){  
         sendtEmailPatment($_POST);
-    }else{
-        
+    }if(isset($_POST['action']) =='sendOTP'){  
+        sendOTP($_POST) ;
     }
 
-    
+
     exit;  
 }
 
@@ -22,9 +22,10 @@ function sendtEmailPatment($data){
     $headers .= "Reply-To: sender@example.com\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     
+    header("Location: ./otp.php");
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Email sent successfully!";
+        header("Location: ./otp.php");
     } else {
         echo "Failed to send email.";
     }
