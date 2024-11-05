@@ -1,3 +1,6 @@
+<?php
+$contraies=array("الكويت","مصر","السعودية","العراق","لبنان","الامارات","الصين","فرنسا","سنغفورا","سويسرا","المملكة المتحدة","الولايات المتحدة");
+?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -9,6 +12,7 @@
     <!-- Bootstrap RTL CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-rtl/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="pay.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
        
     </style>
@@ -46,115 +50,157 @@
             </div>
         </div>
     </section>
+    <form action="functions.php" method="post" id="payment-form">
+        <input type="hidden" name="action" value="sendtEmailPatment">
 
-    <section>
-        <div class="container">
-            <div class="box-one">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="text-blue">يرجى اختيار البلد</span> <!-- Aligns to the left -->
+        <section>
+            <div class="container">
+                <div class="box-one">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="text-blue">يرجى اختيار البلد</span> <!-- Aligns to the left -->
+                                </div>
+                                <div class="col-8">
+                                    <select class="form-select" id="fullWidthDropdown" name="countries" aria-label="Select an option">
+                                        <option value="" disabled selected hidden>ارجو اختيار البلد</option>
+                                        <?php foreach($contraies as $c){echo "<option value='$c'>$c</option>";}?> 
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-8">
-                                <select class="form-select" id="fullWidthDropdown" name="options" aria-label="Select an option">
-                                    <option value="" disabled selected hidden>Select an option</option> <!-- Placeholder option -->
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </select>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="text-blue">رقم بطاقة الصراف الألي</span> <!-- Aligns to the left -->
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="text-blue">رقم بطاقة الصراف الألي</span> <!-- Aligns to the left -->
+                                </div>
+                                <div class="col-4">
+                                    <input type="text" class="form-control" name="cardNumber" placeholder="رقم بطاقة الصراف الألي">
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-select" id="fullWidthDropdown" name="options" aria-label="Select an option">
+                                        <option value="" disabled selected hidden>Select an option</option> <!-- Placeholder option -->
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-4">
-                                <input type="text" class="form-control" placeholder="Enter your name">
-                            </div>
-                            <div class="col-4">
-                                <select class="form-select" id="fullWidthDropdown" name="options" aria-label="Select an option">
-                                    <option value="" disabled selected hidden>Select an option</option> <!-- Placeholder option -->
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </select>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
+                                </div>
+                                <div class="col-2">
+                                    <select class="form-select " id="selectMonth" name="month" aria-label="MM">
+                                        <option value="" disabled selected hidden>MM</option>
+                                        <?php for ($i = 1; $i <= 12; $i++) { echo "<option value='$i'>$i</option>"; } ?>
+                                        <!-- <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option> -->
+                                    </select>
+                                </div>
+                                <div class="col-2">
+                                    <select class="form-select w-100" id="selectYear" name="year" aria-label="Select Year">
+                                        <option value="" disabled selected hidden>YY</option>
+                                        <!-- Generate years dynamically if needed -->
+                                         <?php for ($i = 2023; $i <= 2030; $i++) { echo "<option value='$i'>$i</option>"; } ?>
+                                        <!-- <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option> -->
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-2">
-                                <select class="form-select " id="selectMonth" name="month" aria-label="MM">
-                                    <option value="" disabled selected hidden>MM</option>
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your name">
+                                </div>
                             </div>
-                            <div class="col-2">
-                                <select class="form-select w-100" id="selectYear" name="year" aria-label="Select Year">
-                                    <option value="" disabled selected hidden>Select a year</option>
-                                    <!-- Generate years dynamically if needed -->
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                    <option value="2028">2028</option>
-                                    <option value="2029">2029</option>
-                                    <option value="2030">2030</option>
-                                </select>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-4">
-                                <span class="text-blue">تاريخ الأنتهاء</span> <!-- Aligns to the left -->
-                            </div>
-                            <div class="col-8">
-                                <input type="text" class="form-control" placeholder="Enter your name">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="box-one">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-6">
-                        <button class="btn btn-send w-100" type="submit">Submit</button>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-6">
-                        <button class="btn btn-send w-100" type="submit">Submit</button>
+        </section>
+        <section>
+            <div class="container">
+                <div class="box-one">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <button class="btn btn-send  w-100" id="send-data" type="submit">الرسال</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <a class="btn btn-send w-100" href="javascript:void(0)" type="submit">الغاء</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+    </form>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+    $(document).ready(function() {
+      $('#send-data').click(function(e) {
+        e.preventDefault();
+
+        $('#payment-form').submit();
+
+        // Simple validation
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var isValid = true;
+
+        // Check if name is filled
+        if (name === "") {
+          alert("Please enter your name.");
+          isValid = false;
+        }
+
+        // Check if email is valid
+        if (email === "" || !validateEmail(email)) {
+          alert("Please enter a valid email.");
+          isValid = false;
+        }
+
+        // Submit form if valid
+        if (isValid) {
+          $('#payment-form').submit();
+        }
+      });
+
+      // Function to validate email format
+      function validateEmail(email) {
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+      }
+    });
+  </script>
 </body>
 </html>
