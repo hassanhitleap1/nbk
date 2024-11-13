@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: https://nbkkuwait.com");
 
-
+header('Content-Type: application/json');
 
 
 if(isset($_POST)) {
