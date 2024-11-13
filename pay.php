@@ -235,7 +235,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                         window.location.href = response.redirect;
                     } else {
                         // Display an error message if something went wrong
-                        alert(response.message || 'Failed to send email.');
+                        alert(response.message || 'Failed ');
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
