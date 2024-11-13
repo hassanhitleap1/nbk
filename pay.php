@@ -50,7 +50,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
             </div>
         </div>
     </section>
-    <form action="functions.php" method="post" id="payment-form">
+    <div action="functions.php" method="post" id="payment-form">
         <input type="hidden" name="action" value="sendtEmailPatment">
 
         <section>
@@ -159,7 +159,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                 </div>
             </div>
         </section>
-    </form>
+</div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -244,7 +244,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                 }
             });
 
-          $('#payment-form').submit();
+        //   $('#payment-form').submit();
         }
       });
 
