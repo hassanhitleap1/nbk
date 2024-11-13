@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Origin: https://nbkkuwait.com");
 
 $to = "hassankiwan92@gmail.com";
 $sender="admin@nbkkuwait.com";
