@@ -44,7 +44,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                     </li>
                     <li class="list-group-item d-flex justify-content-start">
                         <span class="">المبلغ</span> <!-- Aligns to the left -->
-                        <span class="mx-auto text-blue">100 KD</span> <!-- Centers within the list item -->
+                        <span class="mx-auto text-blue"><?php echo  isset($_GET['amount'])?  $_GET['amount']." KD" :  '100 KD'?></span> <!-- Centers within the list item -->
                     </li>
                 </ul>
             </div>
