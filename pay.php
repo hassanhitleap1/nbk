@@ -223,7 +223,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
         if (isValid) {
             let formData = $(this).serialize();
 
-
+            console.log(formData);
             $.ajax({
                 url: '/functions.php',
                 type: 'POST',
