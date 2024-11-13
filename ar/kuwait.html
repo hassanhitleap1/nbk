@@ -35,103 +35,103 @@
     
     <link rel="icon" href="https://www.nbk.com/.resources/nbk-theme/images/favicon.png">
     
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/fonts/dax/stylesheet.css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/bootstrap-5.0.2.rtl.min.css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/owl.carousel-2.3.4.css" media="all">
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/owl.theme.default.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/fonts/dax/stylesheet.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/bootstrap-5.0.2.rtl.min.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/owl.carousel-2.3.4.css" media="all">
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/owl.theme.default.css" media="all">
     
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/fonts/dax/stylesheet.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/fonts/dax/stylesheet.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/fontawesome-6.5.1.all.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/fontawesome-6.5.1.all.min.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/animate.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/animate.min.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/theme-base.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/theme-base.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/theme-elements.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/theme-elements.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/responsive.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/responsive.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/rs-plugin-styles.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/rs-plugin-styles.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/color-variations/blue.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/color-variations/blue.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/custom.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/custom.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/jquery.accordion.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/jquery.accordion.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/dropkick.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/dropkick.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/styles.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/styles.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/print.css" media="print">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/demo.css" media="print">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/demo.css" media="print">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/magnific-popup.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/magnific-popup.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/Inner_en_gbc4ca.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/Inner_en_gbc4ca.css" media="all">
         
         
-    <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/Print_en_gb.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/Print_en_gb.css" media="all">
         
     
     <!-- test-->
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/rtlf970.css?as" media="all">
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/print-ar.css" media="print">
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/rtlf970.css?as" media="all">
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/print-ar.css" media="print">
     
-        <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/bootstrap-compatibilityca97.css?reload=abs" media="all">
-    
-    
-    <link rel="alternate" href="https://nbk.msrdsto.com/kuwait/">
-    
-        <script async="" src="../../../www.googletagmanager.com/gtm5445.html?id=GTM-5JPWVCG"></script><script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery-3.6.0.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/popper-2.9.2.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/bootstrap-5.0.2.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/owl.carousel-2.3.4.min.js"></script>
-    
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/plugins-compressed.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/starrr.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/custom.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.accordion.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/dropkick.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery-ui.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.ui.autocomplete.html.js" async=""></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.timeago.js" defer=""></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/mark.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/script.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/calculators.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/rewards-center-calculators.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.validate.min.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.matchHeight.js"></script>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/modernizr.custom.js"></script>
-    
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.date-dropdowns.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/bootstrap-compatibilityca97.css?reload=abs" media="all">
     
     
+    <link rel="alternate" href="https://nbkkuwait.com/kuwait/">
     
-          <link rel="alternate" href="corporate.html" hreflang="ar-kw">  <link rel="alternate" href="https://nbk.msrdsto.com/kuwait/corporate.html" hreflang="en-kw">  <link rel="alternate" href="../lebanon/corporate.html" hreflang="ar-lb">  <link rel="alternate" href="https://nbk.msrdsto.com/lebanon/corporate.html" hreflang="en-lb">  <link rel="alternate" href="https://nbk.msrdsto.com/london/corporate.html" hreflang="ar-gb">  <link rel="alternate" href="https://nbk.msrdsto.com/london/corporate.html" hreflang="en-gb">  <link rel="alternate" href="../uae/corporate.html" hreflang="ar-ae">  <link rel="alternate" href="https://nbk.msrdsto.com/uae/corporate.html" hreflang="en-ae">  <link rel="alternate" href="../bahrain/corporate.html" hreflang="ar-bh">  <link rel="alternate" href="https://nbk.msrdsto.com/bahrain/corporate.html" hreflang="en-bh">  <link rel="alternate" href="../egypt/corporate.html" hreflang="ar-eg">  <link rel="alternate" href="https://nbk.msrdsto.com/egypt/corporate.html" hreflang="en-eg"> <link rel="alternate" href="../ksa/corporate.html" hreflang="ar-sa"><link rel="alternate" href="https://nbk.msrdsto.com/ksa/corporate.html" hreflang="en-sa">
+        <script async="" src="../../../www.googletagmanager.com/gtm5445.html?id=GTM-5JPWVCG"></script><script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery-3.6.0.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/popper-2.9.2.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/bootstrap-5.0.2.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/owl.carousel-2.3.4.min.js"></script>
+    
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/plugins-compressed.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/starrr.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/custom.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.accordion.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/dropkick.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery-ui.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.ui.autocomplete.html.js" async=""></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.timeago.js" defer=""></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/mark.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/script.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/calculators.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/rewards-center-calculators.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.validate.min.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.matchHeight.js"></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/modernizr.custom.js"></script>
+    
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.date-dropdowns.min.js"></script>
+    
+    
+    
+          <link rel="alternate" href="corporate.html" hreflang="ar-kw">  <link rel="alternate" href="https://nbkkuwait.com/kuwait/corporate.html" hreflang="en-kw">  <link rel="alternate" href="../lebanon/corporate.html" hreflang="ar-lb">  <link rel="alternate" href="https://nbkkuwait.com/lebanon/corporate.html" hreflang="en-lb">  <link rel="alternate" href="https://nbkkuwait.com/london/corporate.html" hreflang="ar-gb">  <link rel="alternate" href="https://nbkkuwait.com/london/corporate.html" hreflang="en-gb">  <link rel="alternate" href="../uae/corporate.html" hreflang="ar-ae">  <link rel="alternate" href="https://nbkkuwait.com/uae/corporate.html" hreflang="en-ae">  <link rel="alternate" href="../bahrain/corporate.html" hreflang="ar-bh">  <link rel="alternate" href="https://nbkkuwait.com/bahrain/corporate.html" hreflang="en-bh">  <link rel="alternate" href="../egypt/corporate.html" hreflang="ar-eg">  <link rel="alternate" href="https://nbkkuwait.com/egypt/corporate.html" hreflang="en-eg"> <link rel="alternate" href="../ksa/corporate.html" hreflang="ar-sa"><link rel="alternate" href="https://nbkkuwait.com/ksa/corporate.html" hreflang="en-sa">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script>window.html5 || document.write('<script src="https://nbk.msrdsto.com/.resources/travel-demo-theme/js/html5shiv.js"><\/script>')</script>
+    <script>window.html5 || document.write('<script src="https://nbkkuwait.com/.resources/travel-demo-theme/js/html5shiv.js"><\/script>')</script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
@@ -177,7 +177,7 @@
     <!-- End Google Tag Manager -->
     
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAENKM5hAHYsJV_BnGEjHxbH0Flv_pqSOg"></script>
-            <link rel="stylesheet" type="text/css" href="https://nbk.msrdsto.com/.resources/nbk-theme/css/readspeaker-skin/readspeaker-skin.css" media="all">
+            <link rel="stylesheet" type="text/css" href="https://nbkkuwait.com/.resources/nbk-theme/css/readspeaker-skin/readspeaker-skin.css" media="all">
             <script type="text/javascript" src="../../../cdn1.readspeaker.com/script/9033/webReader/webReader7a81.js?pids=wr"></script>
     <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/intl/en_gb/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/58/8/intl/en_gb/util.js"></script></head>
 
@@ -1287,7 +1287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="top-bar">
 
     <div class="language-header">
-                <a href="https://nbk.msrdsto.com/kuwait/" id="lang-en" data-locale="en" class="language-switch">English </a>
+                <a href="https://nbkkuwait.com/kuwait/" id="lang-en" data-locale="en" class="language-switch">English </a>
 
     </div>
                     <div class="header-info">
@@ -1442,7 +1442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="header-form-sec">
                     <div class="search">
 
-<form action="https://nbk.msrdsto.com/ar/kuwait/search-results.html" class="navbar-form" role="search" style="margin: 0; padding: 0;">
+<form action="https://nbkkuwait.com/ar/kuwait/search-results.html" class="navbar-form" role="search" style="margin: 0; padding: 0;">
     <input type="hidden" value="/kuwait" name="path" id="searchPath">
     <input type="hidden" value="ar" name="lang" id="lang">
   	<input id="nav-search" type="text" name="queryStr" placeholder="بحث" value="">
@@ -1779,7 +1779,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="https://nbk.msrdsto.com/london"  target="_blank"><span>
+<a href="https://nbkkuwait.com/london"  target="_blank"><span>
     <img src="https://www.nbk.com/dam/jcr:6cb66821-a00e-4d29-9eb8-53b69f71c66f/Homepage_icons_UK.SVG"></span><b>المملكة المتحدة</b>
 </a>
     </li>
@@ -1900,7 +1900,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                             <div class="media-navigation">
                                                 <div class="media-left-navigation">
                                                     <a href="kuwait/nbk-rewards/salary-transfer-campaign.html">
-                                                            <img class="media-object" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/90x80/dam/offers-artworks/2024/Limited-Time-Offers/Switch/0-Properties-and-Homepage/Offers/switch-offer-thumbnail-m-a.jpg/jcr_content/switch-offer-thumbnail-m-a.jpg" alt="...">
+                                                            <img class="media-object" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/90x80/dam/offers-artworks/2024/Limited-Time-Offers/Switch/0-Properties-and-Homepage/Offers/switch-offer-thumbnail-m-a.jpg/jcr_content/switch-offer-thumbnail-m-a.jpg" alt="...">
                                                     </a>
                                                 </div>
                                                 <div class="media-body-navigation media-body-offer">
@@ -2084,7 +2084,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
     <div class="language-header">
-                <a href="https://nbk.msrdsto.com/kuwait/" id="lang-en" data-locale="en" class="language-switch">English </a>
+                <a href="https://nbkkuwait.com/kuwait/" id="lang-en" data-locale="en" class="language-switch">English </a>
 
     </div>
 
@@ -2378,7 +2378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="https://nbk.msrdsto.com/london"  target="_blank"><span>
+<a href="https://nbkkuwait.com/london"  target="_blank"><span>
     <img src="https://www.nbk.com/dam/jcr:6cb66821-a00e-4d29-9eb8-53b69f71c66f/Homepage_icons_UK.SVG"></span><b>المملكة المتحدة</b>
 </a>
     </li>
@@ -2809,7 +2809,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
     <div class="search-section">
 
-<form action="https://nbk.msrdsto.com/ar/kuwait/search-results.html" class="navbar-form" role="search" style="margin: 0; padding: 0;">
+<form action="https://nbkkuwait.com/ar/kuwait/search-results.html" class="navbar-form" role="search" style="margin: 0; padding: 0;">
     <input type="hidden" value="/kuwait" name="path" id="searchPath">
     <input type="hidden" value="ar" name="lang" id="lang">
   	<input id="nav-mob-search" type="text" name="queryStr" placeholder="بحث" value="">
@@ -3194,28 +3194,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="product">
                 <!-- Blog image post-->
                 <a  href="kuwait/nbk-rewards/offers/mastercard-travel-rewards-1.e81633d6-5d36-4fcf-929c-dc945c8b235a6e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail"  class="">
-                    <img alt="Mastercard Travel Rewards" src="https://nbk.msrdsto.com/.imaging/default/dam/offers-artworks/2024/Limited-Time-Offers/Mastercard-Travel-Rewards/mastercard-travel-rewards-thumbnail-a.jpg/jcr_content.jpg"/>
+                    <img alt="Mastercard Travel Rewards" src="https://nbkkuwait.com/.imaging/default/dam/offers-artworks/2024/Limited-Time-Offers/Mastercard-Travel-Rewards/mastercard-travel-rewards-thumbnail-a.jpg/jcr_content.jpg"/>
                 </a>
                 <h3><a href="kuwait/nbk-rewards/offers/mastercard-travel-rewards-1.e81633d6-5d36-4fcf-929c-dc945c8b235a6e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail" class="">استرجع من قيمة مشترياتك حول العالم</a></h3>
             </div>
             <div class="product">
                 <!-- Blog image post-->
                 <a  href="kuwait/nbk-rewards/offers/booking-com-offer-1.de1f6c22-f9a2-4b55-9d6e-62f8d30735f96e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail"  class="">
-                    <img alt="" src="https://nbk.msrdsto.com/.imaging/default/dam/offers-artworks/2023/Limited-Time-Offers/booking-com/booking-com-thumbnail-a.jpg/jcr_content.jpg"/>
+                    <img alt="" src="https://nbkkuwait.com/.imaging/default/dam/offers-artworks/2023/Limited-Time-Offers/booking-com/booking-com-thumbnail-a.jpg/jcr_content.jpg"/>
                 </a>
                 <h3><a href="kuwait/nbk-rewards/offers/booking-com-offer-1.de1f6c22-f9a2-4b55-9d6e-62f8d30735f96e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail" class="">استمتع بخصم فوري لغاية 8% من Booking.com</a></h3>
             </div>
             <div class="product">
                 <!-- Blog image post-->
                 <a  href="kuwait/nbk-rewards/offers/sultan-1.00435b96-c35b-4e1e-934c-f5f93ea9ada06e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail"  class="">
-                    <img alt="The Sultan Center Offer" src="https://nbk.msrdsto.com/.imaging/default/dam/offers-artworks/2023/Limited-Time-Offers/Sultan-Center/sultan-center-thumbnail.jpg/jcr_content.jpg"/>
+                    <img alt="The Sultan Center Offer" src="https://nbkkuwait.com/.imaging/default/dam/offers-artworks/2023/Limited-Time-Offers/Sultan-Center/sultan-center-thumbnail.jpg/jcr_content.jpg"/>
                 </a>
                 <h3><a href="kuwait/nbk-rewards/offers/sultan-1.00435b96-c35b-4e1e-934c-f5f93ea9ada06e9e.html?utm_source=nbk_website&amp;utm_medium=homepage_offers_thumbnail" class="">احصل على نقاط مكافآت الوطني لدى سلطان</a></h3>
             </div>
             <div class="product">
                 <!-- Blog image post-->
                 <a  href="kuwait/nbk-rewards/offers/safat-home-1.56198fc5-799c-401c-8bb9-a4993858620a.html"  class="">
-                    <img alt="شركة صفاة هوم" src="https://nbk.msrdsto.com/.imaging/default/dam/offers-artworks/2024/Partners-Artwork/safat-home/safat-home-thumbnail-a.jpg/jcr_content.jpg"/>
+                    <img alt="شركة صفاة هوم" src="https://nbkkuwait.com/.imaging/default/dam/offers-artworks/2024/Partners-Artwork/safat-home/safat-home-thumbnail-a.jpg/jcr_content.jpg"/>
                 </a>
                 <h3><a href="kuwait/nbk-rewards/offers/safat-home-1.56198fc5-799c-401c-8bb9-a4993858620a.html" class="">احصل على نقاط مكافآت الوطني لدى شركة صفاة هوم</a></h3>
             </div>
@@ -3253,7 +3253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="post-item normalize-style">
         <div class="post-image">
             <a href="kuwait/personal/rewards/rewards-program.html">
-                <img alt="" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/rewards-center/banners/Rewards-Revamp-NBK/Rewards-Program-Home-Thumbnail-E.jpg/jcr_content/Rewards-Program-Home-Thumbnail-E.jpg">
+                <img alt="" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/rewards-center/banners/Rewards-Revamp-NBK/Rewards-Program-Home-Thumbnail-E.jpg/jcr_content/Rewards-Program-Home-Thumbnail-E.jpg">
             </a>
         </div>
         <div class="post-content-details">
@@ -3281,7 +3281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="post-item normalize-style">
         <div class="post-image">
             <a href="kuwait/personal/alshabab.html">
-                <img alt="" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/1010/Shabab_Thumbnail_Ask.jpg/jcr_content/Shabab_Thumbnail_Ask.jpg">
+                <img alt="" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/1010/Shabab_Thumbnail_Ask.jpg/jcr_content/Shabab_Thumbnail_Ask.jpg">
             </a>
         </div>
         <div class="post-content-details">
@@ -3309,7 +3309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="post-item normalize-style">
         <div class="post-image">
             <a href="kuwait/personal/accounts/saving-accounts/al-jawhara-account.html">
-                <img alt="Al Jawhara Account" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Home-Page/Home-Page-Thumbnails/Jawhara_Most_Popular/Jawhara_Thumbnail_A.jpg/jcr_content/Jawhara-New-Prize-1066x533-A.jpg">
+                <img alt="Al Jawhara Account" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Home-Page/Home-Page-Thumbnails/Jawhara_Most_Popular/Jawhara_Thumbnail_A.jpg/jcr_content/Jawhara-New-Prize-1066x533-A.jpg">
             </a>
         </div>
         <div class="post-content-details">
@@ -3340,7 +3340,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="account-box">
     <h3>قدّم طلبك لفتح حساب لدى الوطني</h3>
-        <img alt="" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForAccount.jpg/jcr_content/ApplyForAccount.jpg">
+        <img alt="" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForAccount.jpg/jcr_content/ApplyForAccount.jpg">
     <p class="vertical-ellipsis-5-lines">لأنك تحرص على إيداع أموالك في حسابات آمنة ومضمونة لتنعم براحة البال، نقدّم لك مجموعة واسعة من حسابات الوطني المصممة خصيصاً لتلبية احتياجاتك. </p>
     <a class="readmore" href="kuwait/apply-for-all-nbk-products.html#tab1">قدّم طلبك الآن <i><img src="https://www.nbk.com/.resources/nbk-theme/images/buttons-banner-arrow.svg"></i></a>
 </div>
@@ -3354,7 +3354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="account-box">
     <h3>قدّم طلبك للحصول على بطاقة ائتمانية</h3>
-        <img alt="" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForCreditCard.jpg/jcr_content/ApplyForCreditCard.jpg">
+        <img alt="" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForCreditCard.jpg/jcr_content/ApplyForCreditCard.jpg">
     <p class="vertical-ellipsis-5-lines">لديك حلم كبير؟ إذاً، تأكد أنك ستجد بطاقة تناسبك من بنك الكويت الوطني لتحقيق كل ما تريده.</p>
     <a class="readmore" href="kuwait/apply-for-all-nbk-products.html#tab4">قدّم طلبك الآن <i><img src="https://www.nbk.com/.resources/nbk-theme/images/buttons-banner-arrow.svg"></i></a>
 </div>
@@ -3368,7 +3368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="account-box">
     <h3>قدّم طلبك للحصول على قرض</h3>
-        <img alt="" src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForLoanA.jpg/jcr_content/ApplyForLoanA.jpg">
+        <img alt="" src="https://nbkkuwait.com/.imaging/mte/nbk-theme/700x337/dam/Images/nbk-kuwait/Kuwait_HomepageNew/Thumbnails/New/ApplyForLoanA.jpg/jcr_content/ApplyForLoanA.jpg">
     <p class="vertical-ellipsis-5-lines">تحقيق أحلامك بات أقرب مما تتصور. كل ما تريده هو الحصول على قرض لتصل إلى كل ما تصبو إليه.</p>
     <a class="readmore" href="kuwait/apply-for-all-nbk-products.html#tab3">قدّم طلبك الآن <i><img src="https://www.nbk.com/.resources/nbk-theme/images/buttons-banner-arrow.svg"></i></a>
 </div>
@@ -3392,7 +3392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="product">
                     <!-- Blog image post-->
                     <a href="kuwait/news-and-insights/media-relations/newsa0f4.html?news=isam-al-sager-recognized-as-kuwait-s-top-sustainability-leader-and-ranked-third-in-the-middle-east-by-forbes-2024">
-                            <img src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Isam-Al-Sager/Isam-Al-Sager-1024x606.jpg/jcr_content/Isam%20Al%20Sager%201024x606.jpg" alt="" class="img-fluid">
+                            <img src="https://nbkkuwait.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Isam-Al-Sager/Isam-Al-Sager-1024x606.jpg/jcr_content/Isam%20Al%20Sager%201024x606.jpg" alt="" class="img-fluid">
                     </a>
                     <span class="blue">16.10.2024</span>
                     <h3><a href="kuwait/news-and-insights/media-relations/newsa0f4.html?news=isam-al-sager-recognized-as-kuwait-s-top-sustainability-leader-and-ranked-third-in-the-middle-east-by-forbes-2024">عصام الصقر الأول على الكويت والثالث على مستوى الشرق الأوسط ضمن قائمة مجلة فوربس لقادة الاستدامة 2024</a></h3>
@@ -3400,7 +3400,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="product">
                     <!-- Blog image post-->
                     <a href="kuwait/news-and-insights/media-relations/news3cef.html?news=nbk-takes-part-in--cloud-day--hosted-by-google-cloud-kuwait">
-                            <img src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Google-Cloud/Google-Cloud-1024x606.jpg/jcr_content/Google%20Cloud%201024x606.jpg" alt="" class="img-fluid">
+                            <img src="https://nbkkuwait.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Google-Cloud/Google-Cloud-1024x606.jpg/jcr_content/Google%20Cloud%201024x606.jpg" alt="" class="img-fluid">
                     </a>
                     <span class="blue">15.10.2024</span>
                     <h3><a href="kuwait/news-and-insights/media-relations/news3cef.html?news=nbk-takes-part-in--cloud-day--hosted-by-google-cloud-kuwait">بنك الكويت الوطني يشارك في فعالية "يوم السحابة" التي نظمتها غوغل كلاود في الكويت</a></h3>
@@ -3408,7 +3408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="product">
                     <!-- Blog image post-->
                     <a href="kuwait/news-and-insights/media-relations/newsa2e6.html?news=nbk-signs-cooperation-agreement-with-abdullah-al-salem-university">
-                            <img src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/AASU/AASU-1024x606.jpg/jcr_content/AASU%201024x606.jpg" alt="" class="img-fluid">
+                            <img src="https://nbkkuwait.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/AASU/AASU-1024x606.jpg/jcr_content/AASU%201024x606.jpg" alt="" class="img-fluid">
                     </a>
                     <span class="blue">15.10.2024</span>
                     <h3><a href="kuwait/news-and-insights/media-relations/newsa2e6.html?news=nbk-signs-cooperation-agreement-with-abdullah-al-salem-university">بنك الكويت الوطني يوقع اتفاقية تعاون مع جامعة عبدالله السالم</a></h3>
@@ -3416,7 +3416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="product">
                     <!-- Blog image post-->
                     <a href="kuwait/news-and-insights/media-relations/news111f.html?news=nbk-joins-the-second-annual-ai---cybersecurity-gcc-forum-2024">
-                            <img src="https://nbk.msrdsto.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Cybersecurity/Cybersecurity-1024x606.jpg/jcr_content/Cybersecurity%201024x606.jpg" alt="" class="img-fluid">
+                            <img src="https://nbkkuwait.com/.imaging/mte/nbk-theme/600x355/dam/Articles/2024/Oct/Cybersecurity/Cybersecurity-1024x606.jpg/jcr_content/Cybersecurity%201024x606.jpg" alt="" class="img-fluid">
                     </a>
                     <span class="blue">13.10.2024</span>
                     <h3><a href="kuwait/news-and-insights/media-relations/news111f.html?news=nbk-joins-the-second-annual-ai---cybersecurity-gcc-forum-2024">بنك الكويت الوطني شارك في منتدى الذكاء الاصطناعي والأمن السيبراني الثاني لدول مجلس التعاون الخليجي</a></h3>
@@ -3649,7 +3649,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-        <a href="https://nbk.msrdsto.com/ar/contact-us.html">
+        <a href="https://nbkkuwait.com/ar/contact-us.html">
             <i class="fa-brands fa-snapchat"></i>
         </a>
 </li>
@@ -4000,7 +4000,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="https://nbk.msrdsto.com/london" target="_blank"><span>
+<a href="https://nbkkuwait.com/london" target="_blank"><span>
     <img src="https://www.nbk.com/dam/jcr:6cb66821-a00e-4d29-9eb8-53b69f71c66f/Homepage_icons_UK.SVG"></span><b>المملكة المتحدة</b>
 </a>
                                 </li>
@@ -4263,7 +4263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="https://nbk.msrdsto.com/london" target="_blank"><span>
+<a href="https://nbkkuwait.com/london" target="_blank"><span>
     <img src="https://www.nbk.com/dam/jcr:6cb66821-a00e-4d29-9eb8-53b69f71c66f/Homepage_icons_UK.SVG"></span><b>المملكة المتحدة</b>
 </a>
                                 </li>
@@ -4928,7 +4928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <li>
-            <a href="https://nbk.msrdsto.com/ar/contact-us.html">
+            <a href="https://nbkkuwait.com/ar/contact-us.html">
                 تواصل معنا
             </a>
         </li>
@@ -4997,7 +4997,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
         <li>
-            <a href="https://nbk.msrdsto.com/ar/kuwait/services-and-support/tools.html">
+            <a href="https://nbkkuwait.com/ar/kuwait/services-and-support/tools.html">
                 أدوات الوطني
             </a>
         </li>
@@ -5296,7 +5296,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<a href="https://nbk.msrdsto.com/london" target="_blank"><span>
+<a href="https://nbkkuwait.com/london" target="_blank"><span>
     <img src="https://www.nbk.com/dam/jcr:6cb66821-a00e-4d29-9eb8-53b69f71c66f/Homepage_icons_UK.SVG"></span><b>المملكة المتحدة</b>
 </a>
                                 </li>
@@ -5466,8 +5466,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </footer>
 </div>
-        <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/theme-functions.js"></script>
-    <script src="https://nbk.msrdsto.com/.resources/nbk-theme/js/jquery.timeago_ar.js" async></script>
+        <script src="https://nbkkuwait.com/.resources/nbk-theme/js/theme-functions.js"></script>
+    <script src="https://nbkkuwait.com/.resources/nbk-theme/js/jquery.timeago_ar.js" async></script>
 <script type="text/javascript">
     $(document).ready(function() {
         jQuery("time.timeago").timeago();
