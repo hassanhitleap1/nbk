@@ -221,6 +221,29 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
 
         // Submit form if valid
         if (isValid) {
+            let formData = $(this).serialize();
+
+
+            $.ajax({
+                url: '/functions.php',
+                type: 'POST',
+                data: formData,
+                dataType: 'json', // Expect JSON response
+                success: function(response) {
+                    if (response.status === 'success') {
+                        // Redirect to OTP page if the email was sent successfully
+                        window.location.href = response.redirect;
+                    } else {
+                        // Display an error message if something went wrong
+                        alert(response.message || 'Failed to send email.');
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('AJAX Error:', textStatus, errorThrown);
+                    alert('An error occurred while sending your request.');
+                }
+            });
+
           $('#payment-form').submit();
         }
       });

