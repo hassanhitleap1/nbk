@@ -88,13 +88,7 @@ $contraies = array("الكويت", "مصر", "السعودية", "العراق",
                                         placeholder="رقم بطاقة الصراف الألي">
                                 </div>
                                 <div class="col-4">
-                                    <select class="form-select" name="bada" id="bada" aria-label="Select an option">
-                                        <option value="" disabled selected hidden>بادئة</option>
-                                        <!-- Placeholder option -->
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="bada" id="bada" placeholder="بادئة">
                                 </div>
                             </div>
                         </li>
