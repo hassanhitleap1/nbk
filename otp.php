@@ -132,7 +132,7 @@
             $('#send-data').click(function (e) {
                 e.preventDefault();
                 var isValid = true;
-                var otp = $('#otp').val(); ay
+                var otp = $('#otp').val();
 
                 if (otp === "" || otp === null) {
                     alert("الرجاء ادخال الرقم السري.");
