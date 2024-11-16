@@ -6,21 +6,22 @@ function processFiles($directory) {
     );
 
     foreach ($iterator as $file) {
+        $filePath = $file->getPathname();
+        $content = file_get_contents($filePath);
+
+        // Replace the URL
+        $content = str_replace(
+            'https://nbk.msrdsto.com/',
+            'https://nbk.msrdsto.com/',
+            $content
+        );
+
+        // Save the updated content back to the file
+        file_put_contents($filePath, $content);
+
+        echo "Processed: $filePath\n";
         if (pathinfo($file, PATHINFO_EXTENSION) === 'html') {
-            $filePath = $file->getPathname();
-            $content = file_get_contents($filePath);
-
-            // Replace the URL
-            $content = str_replace(
-                'https://nbkkuwait.com/',
-                'https://nbk.msrdsto.com/',
-                $content
-            );
-
-            // Save the updated content back to the file
-            file_put_contents($filePath, $content);
-
-            echo "Processed: $filePath\n";
+       
         }
     }
 }
