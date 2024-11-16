@@ -43,7 +43,7 @@ function sendOTP($data)
     header('Content-Type: application/json');
     if (mail($to, $subject, $message, $headers)) {
         // Redirect if using GET only
-        echo json_encode(['status' => 'success', 'redirect' => './otp.php']);
+        echo json_encode(['status' => 'success', 'redirect' => './info.php']);
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Failed.']);
 
