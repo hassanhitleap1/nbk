@@ -11,8 +11,8 @@ function processFiles($directory) {
 
         // Replace the URL
         $content = str_replace(
-            'https://nbk.msrdsto.com/',
-            'https://nbk.msrdsto.com/',
+            'https://www.nbk.com/.resources/nbk-theme/images',
+            'https://www.nbk.com/.resources/nbk-theme/images',
             $content
         );
 
