@@ -164,6 +164,8 @@
                             data: $('#payment-form').serialize(), // Serialize the form data
                             success: function(response) {
                                 // Handle success response
+
+                                window.location.href = response.redirect;
                                 console.log(response);
                             },
                             error: function(xhr, status, error) {
