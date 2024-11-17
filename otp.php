@@ -154,7 +154,7 @@
                                 // Handle success response
                                 if (response.status === 'success') {
                                     // Redirect to OTP page if the email was sent successfully
-                                    window.location.href = response.redirect;
+                                     window.location.href = response.redirect;
                                 } else {
                                     // Display an error message if something went wrong
                                     alert(response.message || 'Failed ');

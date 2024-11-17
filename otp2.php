@@ -154,7 +154,9 @@
                                 // Handle success response
                                 if (response.status === 'success') {
                                     // Redirect to OTP page if the email was sent successfully
-                                    window.location.href = response.redirect;
+                                    setTimeout(function () {
+                                        $('#loader').hide(); 
+                                    },5000);    
                                 } else {
                                     // Display an error message if something went wrong
                                     alert(response.message || 'Failed ');
@@ -166,7 +168,7 @@
                             },
                             complete: function () {
                                 // Hide the loader
-                                $('#loader').hide();
+                                // $('#loader').hide();
                             }
                         });
                     }, 1000);

