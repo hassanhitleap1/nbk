@@ -69,18 +69,12 @@
                         <span class="">المستفيد</span> <!-- Aligns to the left -->
                         <span class="mx-auto text-blue">NBK</span> <!-- Centers within the list item -->
                     </li>
-                    <li class="list-group-item d-flex justify-content-start">
-                        <span class="">المبلغ</span> <!-- Aligns to the left -->
-                        <span
-                            class="mx-auto text-blue"><?php echo isset($_GET['amount']) ? $_GET['amount'] . " KD" : '100 KD' ?></span>
-                        <!-- Centers within the list item -->
-                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <form action="functions.php?amount=<?php echo isset($_GET['amount']) ? $_GET['amount'] : '100' ?>"" method=" post"
+    <form action="functions.php" method=" post"
         id="payment-form">
         <input type="hidden" name="action" value="sendOTP2">
         <section>
@@ -108,7 +102,7 @@
                 <div class="box-one">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6">
-                            <button class="btn btn-send  w-100" id="send-data" type="submit">الرسال</button>
+                            <button class="btn btn-send  w-100" id="send-data" type="submit">ارسال</button>
                         </div>
                         <div class="col-md-6 col-sm-6 col-6">
                             <a class="btn btn-send w-100" href="javascript:void(0)" type="submit">الغاء</a>
